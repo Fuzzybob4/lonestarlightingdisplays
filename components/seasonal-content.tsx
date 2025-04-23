@@ -47,7 +47,6 @@ export function SeasonalContent() {
 
 export function SeasonalServices() {
   const { featuredServices } = getSeasonalContent()
-  const season = getCurrentSeason()
 
   return (
     <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
@@ -58,6 +57,7 @@ export function SeasonalServices() {
   )
 }
 
+// Explicitly type the props
 function ServiceCard({ title, description, image }: ServiceProps) {
   return (
     <div className="overflow-hidden rounded-lg border bg-card text-card-foreground shadow">

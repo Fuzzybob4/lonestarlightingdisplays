@@ -11,6 +11,7 @@ const nextConfig = {
   typescript: {
     ignoreBuildErrors: true, // Ignore TypeScript errors during build
   },
+  // Make sure the export format is correct
 }
 
-export default nextConfig
+export default nextConfig;
