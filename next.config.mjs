@@ -11,7 +11,8 @@ const nextConfig = {
   typescript: {
     ignoreBuildErrors: true, // Ignore TypeScript errors during build
   },
-  // Make sure the export format is correct
+  // Ensure SWC is used for compilation
+  swcMinify: true,
 }
 
 export default nextConfig;
