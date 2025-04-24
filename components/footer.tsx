@@ -70,6 +70,11 @@ export default function Footer() {
                   Blog
                 </Link>
               </li>
+              <li>
+                <Link href="/terms" className="text-muted-foreground hover:text-primary">
+                  Terms & Policies
+                </Link>
+              </li>
             </ul>
           </div>
 
@@ -127,6 +132,11 @@ export default function Footer() {
 
         <div className="mt-8 border-t pt-8 text-center text-sm text-muted-foreground">
           <p>© {new Date().getFullYear()} Lone Star Lighting Displays. All rights reserved.</p>
+          <p className="mt-2">
+            <Link href="/terms" className="hover:text-primary">
+              Terms & Policies
+            </Link>
+          </p>
         </div>
       </div>
     </footer>
