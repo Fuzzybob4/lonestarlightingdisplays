@@ -34,13 +34,13 @@ export default function Footer() {
                 <span className="sr-only">Instagram</span>
               </Link>
               <Link
-                href="mailto:info@lonestarlightingdisplays.com"
+                href="mailto:lonestartlighingdisplays@outlook.com"
                 className="text-muted-foreground hover:text-primary"
               >
                 <Mail className="h-5 w-5" />
                 <span className="sr-only">Email</span>
               </Link>
-              <Link href="tel:+1234567890" className="text-muted-foreground hover:text-primary">
+              <Link href="tel:+15127713091" className="text-muted-foreground hover:text-primary">
                 <Phone className="h-5 w-5" />
                 <span className="sr-only">Phone</span>
               </Link>
@@ -83,32 +83,17 @@ export default function Footer() {
             <ul className="space-y-2 text-sm">
               <li className="flex items-center gap-2">
                 <Mail className="h-4 w-4 text-muted-foreground" />
-                <a href="mailto:info@lonestarlightingdisplays.com" className="text-muted-foreground hover:text-primary">
-                  info@lonestarlightingdisplays.com
-                </a>
-              </li>
-              <li className="flex items-center gap-2">
-                <Mail className="h-4 w-4 text-muted-foreground" />
                 <a
-                  href="mailto:support@lonestarlightingdisplays.com"
+                  href="mailto:lonestartlighingdisplays@outlook.com"
                   className="text-muted-foreground hover:text-primary"
                 >
-                  support@lonestarlightingdisplays.com
-                </a>
-              </li>
-              <li className="flex items-center gap-2">
-                <Mail className="h-4 w-4 text-muted-foreground" />
-                <a
-                  href="mailto:sales@lonestarlightingdisplays.com"
-                  className="text-muted-foreground hover:text-primary"
-                >
-                  sales@lonestarlightingdisplays.com
+                  lonestartlighingdisplays@outlook.com
                 </a>
               </li>
               <li className="flex items-center gap-2">
                 <Phone className="h-4 w-4 text-muted-foreground" />
-                <a href="tel:+1234567890" className="text-muted-foreground hover:text-primary">
-                  (123) 456-7890
+                <a href="tel:+15127713091" className="text-muted-foreground hover:text-primary">
+                  (512) 771-3091
                 </a>
               </li>
             </ul>

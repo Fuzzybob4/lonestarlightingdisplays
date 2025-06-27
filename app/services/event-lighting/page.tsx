@@ -65,7 +65,7 @@ export default function EventLightingPage() {
             </ul>
           </div>
           <div className="relative h-[400px] rounded-lg overflow-hidden">
-            <Image src="/images/event-professional.jpeg" alt="Corporate event lighting" fill className="object-cover" />
+            <Image src="/images/event-dramatic.png" alt="Corporate event lighting" fill className="object-cover" />
           </div>
         </div>
       </section>

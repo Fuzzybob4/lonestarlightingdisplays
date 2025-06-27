@@ -39,26 +39,11 @@ export default function ContactPage() {
                   <Mail className="h-5 w-5 text-primary mt-1" />
                   <div>
                     <p className="font-medium">Email Us</p>
-                    <div className="space-y-1 mt-1">
-                      <p className="text-sm text-muted-foreground">
-                        <span className="font-medium">General Inquiries:</span>{" "}
-                        <a href="mailto:info@lonestarlightingdisplays.com" className="hover:text-primary">
-                          info@lonestarlightingdisplays.com
-                        </a>
-                      </p>
-                      <p className="text-sm text-muted-foreground">
-                        <span className="font-medium">Customer Support:</span>{" "}
-                        <a href="mailto:support@lonestarlightingdisplays.com" className="hover:text-primary">
-                          support@lonestarlightingdisplays.com
-                        </a>
-                      </p>
-                      <p className="text-sm text-muted-foreground">
-                        <span className="font-medium">Sales & Estimates:</span>{" "}
-                        <a href="mailto:sales@lonestarlightingdisplays.com" className="hover:text-primary">
-                          sales@lonestarlightingdisplays.com
-                        </a>
-                      </p>
-                    </div>
+                    <p className="text-sm text-muted-foreground mt-1">
+                      <a href="mailto:lonestartlighingdisplays@outlook.com" className="hover:text-primary">
+                        lonestartlighingdisplays@outlook.com
+                      </a>
+                    </p>
                   </div>
                 </div>
                 <div className="flex items-start gap-3">
@@ -66,8 +51,8 @@ export default function ContactPage() {
                   <div>
                     <p className="font-medium">Call Us</p>
                     <p className="text-sm text-muted-foreground mt-1">
-                      <a href="tel:+1234567890" className="hover:text-primary">
-                        (123) 456-7890
+                      <a href="tel:+15127713091" className="hover:text-primary">
+                        (512) 771-3091
                       </a>
                     </p>
                   </div>
