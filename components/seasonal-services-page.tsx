@@ -48,13 +48,59 @@ export function SeasonalServicesPage() {
           <div className="flex flex-col items-center text-center">
             <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">Additional Services</h2>
             <p className="mt-4 max-w-[700px] text-muted-foreground">
-              {season === "holiday"
-                ? "Customize your holiday display with these add-on services"
-                : "Enhance your outdoor lighting with these specialized services"}
+              Specialized lighting solutions for your special occasions and events
             </p>
           </div>
           <div className="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {season === "holiday" ? <HolidayAddOns /> : <GeneralAddOns />}
+            <div className="overflow-hidden rounded-lg border bg-card text-card-foreground shadow">
+              <div className="relative h-48">
+                <Image
+                  src="/images/wedding-lighting.jpeg"
+                  alt="Wedding Lighting"
+                  fill
+                  className="object-cover object-top"
+                />
+              </div>
+              <div className="p-6">
+                <h3 className="text-xl font-bold">Wedding Lighting</h3>
+                <p className="mt-2 text-muted-foreground">
+                  Create magical moments with romantic lighting for your special day
+                </p>
+                <Button className="mt-4 w-full" asChild>
+                  <Link href="/services/wedding-lighting">Learn More</Link>
+                </Button>
+              </div>
+            </div>
+
+            <div className="overflow-hidden rounded-lg border bg-card text-card-foreground shadow">
+              <div className="relative h-48">
+                <Image src="/images/event-lighting.png" alt="Event Lighting" fill className="object-cover object-top" />
+              </div>
+              <div className="p-6">
+                <h3 className="text-xl font-bold">Event Lighting</h3>
+                <p className="mt-2 text-muted-foreground">
+                  Professional lighting solutions for corporate events and celebrations
+                </p>
+                <Button className="mt-4 w-full" asChild>
+                  <Link href="/services/event-lighting">Learn More</Link>
+                </Button>
+              </div>
+            </div>
+
+            <div className="overflow-hidden rounded-lg border bg-card text-card-foreground shadow">
+              <div className="relative h-48">
+                <Image src="/images/christmas-lighting.jpeg" alt="Christmas Lighting" fill className="object-cover" />
+              </div>
+              <div className="p-6">
+                <h3 className="text-xl font-bold">Christmas Lighting</h3>
+                <p className="mt-2 text-muted-foreground">
+                  Transform your home into a winter wonderland with festive displays
+                </p>
+                <Button className="mt-4 w-full" asChild>
+                  <Link href="/services/christmas-lighting">Learn More</Link>
+                </Button>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -224,5 +270,5 @@ function HolidayAddOns() {
 }
 
 function GeneralAddOns() {
-  return <>{/* General add-ons content */}</>
+  return <></>
 }
