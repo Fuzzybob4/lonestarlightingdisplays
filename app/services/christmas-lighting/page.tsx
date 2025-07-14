@@ -70,6 +70,85 @@ export default function ChristmasLightingPage() {
         </div>
       </section>
 
+      {/* Local Service Areas */}
+      <section className="bg-muted py-12 md:py-24">
+        <div className="container">
+          <div className="flex flex-col items-center text-center mb-12">
+            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">
+              🎄 Holiday Lighting Services in Buda, Kyle, San Marcos, and South Austin
+            </h2>
+            <p className="mt-4 max-w-[800px] text-muted-foreground text-lg">
+              At Lone Star Lighting Displays, we bring the magic of Christmas to life throughout Buda, Kyle, San Marcos,
+              and South Austin with custom holiday lighting designed to wow your neighbors and community.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 gap-8 md:grid-cols-2 items-center mb-12">
+            <div>
+              <p className="text-muted-foreground text-lg mb-6">
+                Whether you're decorating a charming front porch in Buda, outlining rooflines in South Austin, or
+                wrapping trees around a San Marcos property, our team delivers professional, eye-catching Christmas
+                light installation that fits your vision.
+              </p>
+
+              <h3 className="text-2xl font-bold mb-4">🌟 Why Homeowners & Businesses Trust Us in These Areas:</h3>
+
+              <div className="space-y-4">
+                <div>
+                  <h4 className="font-bold text-primary">Buda</h4>
+                  <p className="text-muted-foreground">
+                    We specialize in classic warm white roofline installs and tree wrapping services perfect for
+                    neighborhoods like Garlic Creek and Sunfield.
+                  </p>
+                </div>
+
+                <div>
+                  <h4 className="font-bold text-primary">Kyle</h4>
+                  <p className="text-muted-foreground">
+                    From holiday lighting for Plum Creek homes to larger HOA displays, we're known for our punctuality
+                    and stunning designs in Kyle TX.
+                  </p>
+                </div>
+
+                <div>
+                  <h4 className="font-bold text-primary">San Marcos</h4>
+                  <p className="text-muted-foreground">
+                    Whether it's a rental property, business storefront, or residential home, we create festive
+                    atmospheres along the I-35 corridor and historic neighborhoods with professional San Marcos
+                    Christmas lights.
+                  </p>
+                </div>
+
+                <div>
+                  <h4 className="font-bold text-primary">South Austin</h4>
+                  <p className="text-muted-foreground">
+                    Our South Austin holiday lighting displays transform homes and businesses in communities like Circle
+                    C, Shady Hollow, and Sunset Valley into holiday landmarks.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div className="relative h-[400px] rounded-lg overflow-hidden">
+              <Image
+                src="/images/christmas-elegant.png"
+                alt="Christmas lighting installation in Buda, Kyle, San Marcos, and South Austin"
+                fill
+                className="object-cover"
+              />
+            </div>
+          </div>
+
+          <div className="bg-background rounded-lg p-6 shadow">
+            <p className="text-muted-foreground text-center">
+              We're proud to serve these growing Central Texas communities and can accommodate both early installs and
+              unique design requests for commercial and residential properties. Our outdoor Christmas decorations bring
+              joy to families throughout Buda, Kyle, San Marcos, and the greater Austin area.
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* Christmas Packages */}
       <section className="bg-muted py-12 md:py-24">
         <div className="container">
