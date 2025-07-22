@@ -25,11 +25,11 @@ export default function Footer() {
               Bringing Texas-sized holiday magic to your home with professional Christmas light installation.
             </p>
             <div className="flex gap-4 mt-4">
-              <Link href="https://facebook.com" className="text-muted-foreground hover:text-primary">
+              <Link href="https://facebook.com/share/1FADNirDJj/?mibextid=wwXfr" className="text-muted-foreground hover:text-primary">
                 <Facebook className="h-5 w-5" />
                 <span className="sr-only">Facebook</span>
               </Link>
-              <Link href="https://instagram.com" className="text-muted-foreground hover:text-primary">
+              <Link href="https://www.instagram.com/lonestarlightingdisplays/" className="text-muted-foreground hover:text-primary">
                 <Instagram className="h-5 w-5" />
                 <span className="sr-only">Instagram</span>
               </Link>
