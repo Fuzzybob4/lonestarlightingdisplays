@@ -36,6 +36,16 @@ export default function RootLayout({
             <Footer />
           </div>
         </ThemeProvider>
+
+        {/* Start of HubSpot Embed Code */}
+        <script
+          type="text/javascript"
+          id="hs-script-loader"
+          async
+          defer
+          src="//js-na1.hs-scripts.com/43556651.js"
+        ></script>
+        {/* End of HubSpot Embed Code */}
       </body>
     </html>
   )

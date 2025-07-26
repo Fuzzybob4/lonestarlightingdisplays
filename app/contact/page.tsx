@@ -40,8 +40,8 @@ export default function ContactPage() {
                   <div>
                     <p className="font-medium">Email Us</p>
                     <p className="text-sm text-muted-foreground mt-1">
-                      <a href="mailto:lonestartlighingdisplays@outlook.com" className="hover:text-primary">
-                        lonestartlighingdisplays@outlook.com
+                      <a href="mailto:lonestarlightingdisplays@outlook.com" className="hover:text-primary">
+                        lonestarlightingdisplays@outlook.com
                       </a>
                     </p>
                   </div>
