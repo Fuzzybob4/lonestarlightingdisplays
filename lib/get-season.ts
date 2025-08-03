@@ -25,9 +25,10 @@ export function getCurrentSeason(): Season {
   const month = today.getMonth() + 1 // JavaScript months are 0-indexed
   const day = today.getDate()
 
-  // Holiday season: September 1 - January 15
+  // Holiday season: August 1 - January 15
   if (
-    (month === 9 && day >= 1) || // Sept 1 or later
+    (month === 8 && day >= 1) || // Aug 1 or later
+    month === 9 || //All of September
     month === 10 || // All of October
     month === 11 || // All of November
     month === 12 || // All of December
@@ -36,7 +37,7 @@ export function getCurrentSeason(): Season {
     return "holiday"
   }
 
-  // General season: January 16 - August 31
+  // General season: January 16 - July 31
   return "general"
 }
 
