@@ -16,7 +16,7 @@ export function SeasonalServicesPage() {
         <div className="absolute inset-0 bg-gradient-to-b from-background/20 to-background/60 z-10" />
         <div className="relative h-[400px] w-full">
           <Image
-            src={season === "holiday" ? "/images/holiday-lights.png" : "/images/outdoor-lighting.png"}
+            src={season === "holiday" ? "/images/christmas-lighting.jpeg" : "/images/outdoor-lighting.png"}
             alt={season === "holiday" ? "Holiday lighting services" : "Outdoor lighting services"}
             fill
             className="object-cover brightness-110"
@@ -74,7 +74,7 @@ export function SeasonalServicesPage() {
 
             <div className="overflow-hidden rounded-lg border bg-card text-card-foreground shadow">
               <div className="relative h-48">
-                <Image src="/images/event-lighting.png" alt="Event Lighting" fill className="object-cover object-top" />
+                <Image src="/images/event-dramatic.png" alt="Event Lighting" fill className="object-cover object-top" />
               </div>
               <div className="p-6">
                 <h3 className="text-xl font-bold">Event Lighting</h3>

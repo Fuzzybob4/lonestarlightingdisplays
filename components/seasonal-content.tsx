@@ -14,13 +14,18 @@ interface ServiceProps {
 
 export function SeasonalContent() {
   const { heroTitle, heroSubtitle, heroImage } = getSeasonalContent()
+  const season = getCurrentSeason()
 
   return (
     <section className="relative">
       <div className="absolute inset-0 bg-gradient-to-b from-background/20 to-background/60 z-10" />
       <div className="relative h-[600px] w-full">
         <Image
-          src={heroImage || "/placeholder.svg"}
+          src={
+            season === "holiday"
+              ? "/images/hero-christmas-lighting.png"
+              : heroImage || "/placeholder.svg?height=600&width=1200&text=Hero+Image"
+          }
           alt="Lone Star Lighting Displays"
           fill
           className="object-cover brightness-110"
@@ -59,11 +64,26 @@ export function SeasonalServices() {
 
 // Explicitly type the props
 function ServiceCard({ title, description, image }: ServiceProps) {
+  // Map package titles to their specific images
+  const getPackageImage = (title: string) => {
+    if (title.toLowerCase().includes("basic")) {
+      return "/images/basic-package.png"
+    }
+    if (title.toLowerCase().includes("advanced")) {
+      return "/images/advanced-package.png"
+    }
+    if (title.toLowerCase().includes("gingerbread")) {
+      return "/images/gingerbread-package.png"
+    }
+    // Fallback to the original image or placeholder
+    return image || "/placeholder.svg?height=240&width=400&text=" + encodeURIComponent(title)
+  }
+
   return (
     <div className="overflow-hidden rounded-lg border bg-card text-card-foreground shadow">
       <div className="relative h-60">
         <Image
-          src={image || "/placeholder.svg"}
+          src={getPackageImage(title) || "/placeholder.svg"}
           alt={title}
           fill
           className="object-cover"

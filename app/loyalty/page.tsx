@@ -17,7 +17,7 @@ export default function LoyaltyPage() {
       <section className="relative">
         <div className="absolute inset-0 bg-gradient-to-b from-background/80 to-background z-10" />
         <div className="relative h-[400px] w-full">
-          <Image src="/images/holiday-lights.png" alt="Loyalty Program" fill className="object-cover" priority />
+          <Image src="/images/christmas-elegant.png" alt="Loyalty Program" fill className="object-cover" priority />
         </div>
         <div className="container absolute inset-0 z-20 flex flex-col items-center justify-center text-center">
           <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl">Lone Star Bright Rewards</h1>
@@ -171,7 +171,7 @@ export default function LoyaltyPage() {
       <section className="container py-12 md:py-24">
         <div className="grid grid-cols-1 gap-12 md:grid-cols-2 items-center">
           <div className="relative h-[300px] rounded-lg overflow-hidden">
-            <Image src="/images/holiday-advanced.png" alt="Referral Program" fill className="object-cover" />
+            <Image src="/images/hevent-string-lights.jpeg" alt="Referral Program" fill className="object-cover" />
           </div>
           <div>
             <div className="flex items-center gap-2 mb-4">

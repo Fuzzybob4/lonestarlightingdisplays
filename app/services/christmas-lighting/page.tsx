@@ -16,7 +16,7 @@ export default function ChristmasLightingPage() {
         <div className="absolute inset-0 bg-gradient-to-b from-background/20 to-background/60 z-10" />
         <div className="relative h-[400px] w-full">
           <Image
-            src="/images/christmas-colorful.jpeg"
+            src="/images/christmas-elegant.png"
             alt="Christmas Lighting"
             fill
             className="object-cover brightness-110"
@@ -65,7 +65,12 @@ export default function ChristmasLightingPage() {
             </ul>
           </div>
           <div className="relative h-[400px] rounded-lg overflow-hidden">
-            <Image src="/images/christmas-elegant.png" alt="Christmas lighting display" fill className="object-cover" />
+            <Image
+              src="/images/christmas-colorful.jpeg"
+              alt="Christmas lighting display"
+              fill
+              className="object-cover"
+            />
           </div>
         </div>
       </section>
@@ -150,57 +155,55 @@ export default function ChristmasLightingPage() {
       </section>
 
       {/* Christmas Packages */}
-      <section className="bg-muted py-12 md:py-24">
-        <div className="container">
-          <div className="flex flex-col items-center text-center mb-12">
-            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">Christmas Lighting Packages</h2>
-            <p className="mt-4 max-w-[700px] text-muted-foreground">Choose the perfect holiday display for your home</p>
+      <section className="container py-12 md:py-24">
+        <div className="flex flex-col items-center text-center mb-12">
+          <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">Christmas Lighting Packages</h2>
+          <p className="mt-4 max-w-[700px] text-muted-foreground">Choose the perfect holiday display for your home</p>
+        </div>
+        <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
+          <div className="bg-background rounded-lg p-6 shadow">
+            <div className="flex items-center gap-2 mb-4">
+              <Snowflake className="h-5 w-5 text-primary" />
+              <h3 className="text-xl font-bold">Basic Package</h3>
+            </div>
+            <p className="text-2xl font-bold mb-2">Starting at $400</p>
+            <p className="text-muted-foreground mb-4">Simple elegance for your home</p>
+            <ul className="space-y-2 text-sm">
+              <li>• Roofline lighting</li>
+              <li>• Front door decoration</li>
+              <li>• Basic timer controls</li>
+              <li>• Installation & removal</li>
+            </ul>
           </div>
-          <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
-            <div className="bg-background rounded-lg p-6 shadow">
-              <div className="flex items-center gap-2 mb-4">
-                <Snowflake className="h-5 w-5 text-primary" />
-                <h3 className="text-xl font-bold">Basic Package</h3>
-              </div>
-              <p className="text-2xl font-bold mb-2">Starting at $400</p>
-              <p className="text-muted-foreground mb-4">Simple elegance for your home</p>
-              <ul className="space-y-2 text-sm">
-                <li>• Roofline lighting</li>
-                <li>• Front door decoration</li>
-                <li>• Basic timer controls</li>
-                <li>• Installation & removal</li>
-              </ul>
+          <div className="bg-background rounded-lg p-6 shadow border-2 border-primary">
+            <div className="flex items-center gap-2 mb-4">
+              <Gift className="h-5 w-5 text-primary" />
+              <h3 className="text-xl font-bold">Advanced Package</h3>
             </div>
-            <div className="bg-background rounded-lg p-6 shadow border-2 border-primary">
-              <div className="flex items-center gap-2 mb-4">
-                <Gift className="h-5 w-5 text-primary" />
-                <h3 className="text-xl font-bold">Advanced Package</h3>
-              </div>
-              <p className="text-2xl font-bold mb-2">Starting at $800</p>
-              <p className="text-muted-foreground mb-4">Most popular holiday display</p>
-              <ul className="space-y-2 text-sm">
-                <li>• Complete roofline lighting</li>
-                <li>• Tree wrapping (2-3 trees)</li>
-                <li>• Wreaths and garlands</li>
-                <li>• Smart timer controls</li>
-                <li>• Installation & removal</li>
-              </ul>
+            <p className="text-2xl font-bold mb-2">Starting at $800</p>
+            <p className="text-muted-foreground mb-4">Most popular holiday display</p>
+            <ul className="space-y-2 text-sm">
+              <li>• Complete roofline lighting</li>
+              <li>• Tree wrapping (2-3 trees)</li>
+              <li>• Wreaths and garlands</li>
+              <li>• Smart timer controls</li>
+              <li>• Installation & removal</li>
+            </ul>
+          </div>
+          <div className="bg-background rounded-lg p-6 shadow">
+            <div className="flex items-center gap-2 mb-4">
+              <TreePine className="h-5 w-5 text-primary" />
+              <h3 className="text-xl font-bold">Gingerbread Package</h3>
             </div>
-            <div className="bg-background rounded-lg p-6 shadow">
-              <div className="flex items-center gap-2 mb-4">
-                <TreePine className="h-5 w-5 text-primary" />
-                <h3 className="text-xl font-bold">Gingerbread Package</h3>
-              </div>
-              <p className="text-2xl font-bold mb-2">Starting at $1,500</p>
-              <p className="text-muted-foreground mb-4">Complete holiday transformation</p>
-              <ul className="space-y-2 text-sm">
-                <li>• Full home lighting design</li>
-                <li>• Extensive tree wrapping</li>
-                <li>• Premium decorative elements</li>
-                <li>• Landscape accent lighting</li>
-                <li>• Smart home integration</li>
-              </ul>
-            </div>
+            <p className="text-2xl font-bold mb-2">Starting at $1,500</p>
+            <p className="text-muted-foreground mb-4">Complete holiday transformation</p>
+            <ul className="space-y-2 text-sm">
+              <li>• Full home lighting design</li>
+              <li>• Extensive tree wrapping</li>
+              <li>• Premium decorative elements</li>
+              <li>• Landscape accent lighting</li>
+              <li>• Smart home integration</li>
+            </ul>
           </div>
         </div>
       </section>
