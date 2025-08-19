@@ -166,7 +166,7 @@ export default function ChristmasLightingPage() {
               <Snowflake className="h-5 w-5 text-primary" />
               <h3 className="text-xl font-bold">Basic Package</h3>
             </div>
-            <p className="text-2xl font-bold mb-2">Starting at $400</p>
+            <p className="text-2xl font-bold mb-2">Starting at $600</p>
             <p className="text-muted-foreground mb-4">Simple elegance for your home</p>
             <ul className="space-y-2 text-sm">
               <li>• Roofline lighting</li>
@@ -180,7 +180,7 @@ export default function ChristmasLightingPage() {
               <Gift className="h-5 w-5 text-primary" />
               <h3 className="text-xl font-bold">Advanced Package</h3>
             </div>
-            <p className="text-2xl font-bold mb-2">Starting at $800</p>
+            <p className="text-2xl font-bold mb-2">Starting at $1,200</p>
             <p className="text-muted-foreground mb-4">Most popular holiday display</p>
             <ul className="space-y-2 text-sm">
               <li>• Complete roofline lighting</li>
@@ -195,7 +195,7 @@ export default function ChristmasLightingPage() {
               <TreePine className="h-5 w-5 text-primary" />
               <h3 className="text-xl font-bold">Gingerbread Package</h3>
             </div>
-            <p className="text-2xl font-bold mb-2">Starting at $1,500</p>
+            <p className="text-2xl font-bold mb-2">Starting at $2,500</p>
             <p className="text-muted-foreground mb-4">Complete holiday transformation</p>
             <ul className="space-y-2 text-sm">
               <li>• Full home lighting design</li>

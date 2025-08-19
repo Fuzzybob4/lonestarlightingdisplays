@@ -64,7 +64,7 @@ export function SeasonalServices() {
 
 // Explicitly type the props
 function ServiceCard({ title, description, image }: ServiceProps) {
-  // Map package titles to their specific images
+  // Map package titles to their specific images and URLs
   const getPackageImage = (title: string) => {
     if (title.toLowerCase().includes("basic")) {
       return "/images/basic-package.png"
@@ -75,30 +75,42 @@ function ServiceCard({ title, description, image }: ServiceProps) {
     if (title.toLowerCase().includes("gingerbread")) {
       return "/images/gingerbread-package.png"
     }
-    // Fallback to the original image or placeholder
     return image || "/placeholder.svg?height=240&width=400&text=" + encodeURIComponent(title)
   }
 
+  const getPackageUrl = (title: string) => {
+    if (title.toLowerCase().includes("basic")) {
+      return "/packages/basic"
+    }
+    if (title.toLowerCase().includes("advanced")) {
+      return "/packages/advanced"
+    }
+    if (title.toLowerCase().includes("gingerbread")) {
+      return "/packages/gingerbread"
+    }
+    return "/booking"
+  }
+
   return (
-    <div className="overflow-hidden rounded-lg border bg-card text-card-foreground shadow">
-      <div className="relative h-60">
-        <Image
-          src={getPackageImage(title) || "/placeholder.svg"}
-          alt={title}
-          fill
-          className="object-cover"
-          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-          priority={title.includes("Patio") || title.includes("Deck")}
-        />
+    <Link href={getPackageUrl(title)} className="block group">
+      <div className="overflow-hidden rounded-lg border bg-card text-card-foreground shadow transition-all duration-200 group-hover:shadow-lg group-hover:scale-105">
+        <div className="relative h-60">
+          <Image
+            src={getPackageImage(title) || "/placeholder.svg"}
+            alt={title}
+            fill
+            className="object-cover transition-transform duration-200 group-hover:scale-110"
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+            priority={title.includes("Patio") || title.includes("Deck")}
+          />
+        </div>
+        <div className="p-6">
+          <h3 className="text-xl font-bold group-hover:text-primary transition-colors">{title}</h3>
+          <p className="mt-2 text-muted-foreground">{description}</p>
+          <Button className="mt-6 w-full">Learn More & Book</Button>
+        </div>
       </div>
-      <div className="p-6">
-        <h3 className="text-xl font-bold">{title}</h3>
-        <p className="mt-2 text-muted-foreground">{description}</p>
-        <Button className="mt-6 w-full" asChild>
-          <Link href="/booking">Request an Estimate</Link>
-        </Button>
-      </div>
-    </div>
+    </Link>
   )
 }
 

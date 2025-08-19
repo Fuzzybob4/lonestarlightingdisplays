@@ -85,6 +85,42 @@ export default function Footer() {
           </div>
 
           <div>
+            <h3 className="text-base font-medium mb-4">Service Areas</h3>
+            <ul className="space-y-2 text-sm">
+              <li>
+                <Link href="/service-areas/austin" className="text-muted-foreground hover:text-primary">
+                  Austin
+                </Link>
+              </li>
+              <li>
+                <Link href="/service-areas/buda" className="text-muted-foreground hover:text-primary">
+                  Buda
+                </Link>
+              </li>
+              <li>
+                <Link href="/service-areas/kyle" className="text-muted-foreground hover:text-primary">
+                  Kyle
+                </Link>
+              </li>
+              <li>
+                <Link href="/service-areas/san-marcos" className="text-muted-foreground hover:text-primary">
+                  San Marcos
+                </Link>
+              </li>
+              <li>
+                <Link href="/service-areas/dripping-springs" className="text-muted-foreground hover:text-primary">
+                  Dripping Springs
+                </Link>
+              </li>
+              <li>
+                <Link href="/service-areas" className="text-muted-foreground hover:text-primary font-medium">
+                  View All Areas
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          <div>
             <h3 className="text-base font-medium mb-4">Contact Us</h3>
             <ul className="space-y-2 text-sm">
               <li className="flex items-center gap-2">
@@ -103,21 +139,20 @@ export default function Footer() {
                 </a>
               </li>
             </ul>
-          </div>
-
-          <div>
-            <h3 className="text-base font-medium mb-4">Hours</h3>
-            <ul className="space-y-2 text-sm">
-              <li className="text-muted-foreground">
-                <span className="font-medium">Mon-Fri:</span> 9am - 6pm
-              </li>
-              <li className="text-muted-foreground">
-                <span className="font-medium">Saturday:</span> 10am - 4pm
-              </li>
-              <li className="text-muted-foreground">
-                <span className="font-medium">Sunday:</span> Closed
-              </li>
-            </ul>
+            <div className="mt-4">
+              <h4 className="text-base font-medium mb-2">Hours</h4>
+              <ul className="space-y-1 text-sm">
+                <li className="text-muted-foreground">
+                  <span className="font-medium">Mon-Fri:</span> 9am - 6pm
+                </li>
+                <li className="text-muted-foreground">
+                  <span className="font-medium">Saturday:</span> 10am - 4pm
+                </li>
+                <li className="text-muted-foreground">
+                  <span className="font-medium">Sunday:</span> Closed
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
 
