@@ -64,9 +64,45 @@ export default function Home() {
             <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">Our Services</h2>
             <p className="mt-4 max-w-[700px] text-muted-foreground">Professional lighting solutions for every need</p>
           </div>
+
+          {/* Featured Seasonal Services */}
           <div className="mt-12">
             <SeasonalServices />
           </div>
+
+          {/* Quick Service Cards */}
+          <div className="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <Card className="hover:shadow-lg transition-shadow">
+              <CardContent className="p-6">
+                <h3 className="text-xl font-bold mb-2">🎄 Holiday Lighting</h3>
+                <p className="text-muted-foreground mb-4">Transform your home with stunning Christmas displays</p>
+                <Button variant="outline" size="sm" asChild>
+                  <Link href="/services/christmas-lighting">Learn More</Link>
+                </Button>
+              </CardContent>
+            </Card>
+
+            <Card className="hover:shadow-lg transition-shadow">
+              <CardContent className="p-6">
+                <h3 className="text-xl font-bold mb-2">💡 Landscape Lighting</h3>
+                <p className="text-muted-foreground mb-4">Enhance your outdoor spaces year-round</p>
+                <Button variant="outline" size="sm" asChild>
+                  <Link href="/services/landscape-lighting">Learn More</Link>
+                </Button>
+              </CardContent>
+            </Card>
+
+            <Card className="hover:shadow-lg transition-shadow">
+              <CardContent className="p-6">
+                <h3 className="text-xl font-bold mb-2">🎉 Event Lighting</h3>
+                <p className="text-muted-foreground mb-4">Professional lighting for special occasions</p>
+                <Button variant="outline" size="sm" asChild>
+                  <Link href="/services/event-lighting">Learn More</Link>
+                </Button>
+              </CardContent>
+            </Card>
+          </div>
+
           <div className="mt-12 text-center">
             <Button size="lg" variant="outline" asChild>
               <Link href="/services">View All Services</Link>
@@ -75,7 +111,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Rest of the page content remains the same */}
       {/* Testimonials */}
       <section className="container py-12 md:py-24">
         <div className="flex flex-col items-center text-center">
