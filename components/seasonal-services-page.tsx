@@ -248,7 +248,7 @@ export function SeasonalServicesPage() {
                   year-round.
                 </p>
                 <Button variant="outline" className="w-full group bg-transparent" asChild>
-                  <Link href="/services">
+                  <Link href="/services/landscape-lighting">
                     View Details
                     <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
                   </Link>
@@ -278,7 +278,7 @@ export function SeasonalServicesPage() {
                   available.
                 </p>
                 <Button variant="outline" className="w-full group bg-transparent" asChild>
-                  <Link href="/services">
+                  <Link href="/services/security-lighting">
                     View Details
                     <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
                   </Link>
@@ -368,7 +368,7 @@ export function SeasonalServicesPage() {
                   evening.
                 </p>
                 <Button variant="outline" className="w-full group bg-transparent" asChild>
-                  <Link href="/services">
+                  <Link href="/services/outdoor-living">
                     View Details
                     <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
                   </Link>
