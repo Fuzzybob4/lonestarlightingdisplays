@@ -48,23 +48,23 @@ export function getSeasonalContent(): SeasonalContentData {
     return {
       heroTitle: "Stunning Holiday Displays",
       heroSubtitle: "Transform Your Home with Professional Christmas Lighting",
-      heroImage: "/placeholder.svg?height=600&width=1200&text=Holiday+Lighting+Display",
+      heroImage: "/images/hero-christmas-lighting.png",
       ctaText: "Book Your Holiday Display",
       featuredServices: [
         {
           title: "Basic Package",
           description: "Beautiful roofline lighting to highlight your home's architecture",
-          image: "/placeholder.svg?height=300&width=400&text=Basic+Holiday+Package",
+          image: "/images/basic-package.png",
         },
         {
           title: "Advanced Package",
           description: "Roofline lighting plus wreaths & garlands for a complete look",
-          image: "/placeholder.svg?height=300&width=400&text=Advanced+Holiday+Package",
+          image: "/images/advanced-package.png",
         },
         {
           title: "Gingerbread Package",
           description: "Complete holiday transformation with all the trimmings",
-          image: "/placeholder.svg?height=300&width=400&text=Premium+Holiday+Package",
+          image: "/images/gingerbread-package.png",
         },
       ],
     }
@@ -73,23 +73,23 @@ export function getSeasonalContent(): SeasonalContentData {
   return {
     heroTitle: "Transforming Yards, Homes & Patios into Nighttime Wonders",
     heroSubtitle: "Professional Outdoor Lighting Solutions",
-    heroImage: "/placeholder.svg?height=600&width=1200&text=Outdoor+Lighting+Solutions",
+    heroImage: "/images/outdoor-lighting.png",
     ctaText: "Enhance Your Outdoor Space",
     featuredServices: [
       {
         title: "Landscape Lighting",
         description: "Highlight your garden's best features with strategic lighting",
-        image: "/placeholder.svg?height=300&width=400&text=Landscape+Lighting",
+        image: "/images/landscape-lighting.png",
       },
       {
         title: "Patio & Deck Lighting",
         description: "Create the perfect ambiance for outdoor entertaining",
-        image: "/placeholder.svg?height=300&width=400&text=Patio+Deck+Lighting",
+        image: "/images/patio.png",
       },
       {
         title: "Security Lighting",
         description: "Enhance safety and security around your property",
-        image: "/placeholder.svg?height=300&width=400&text=Security+Lighting",
+        image: "/images/security-lighting.png",
       },
     ],
   }
