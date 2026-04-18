@@ -1,5 +1,6 @@
 import type React from "react"
 import { Inter } from "next/font/google"
+import Script from "next/script"
 import { ThemeProvider } from "@/components/theme-provider"
 import Header from "@/components/header"
 import Footer from "@/components/footer"
@@ -38,13 +39,11 @@ export default function RootLayout({
         </ThemeProvider>
 
         {/* Start of HubSpot Embed Code */}
-        <script
-          type="text/javascript"
+        <Script
           id="hs-script-loader"
-          async
-          defer
           src="//js-na1.hs-scripts.com/43556651.js"
-        ></script>
+          strategy="afterInteractive"
+        />
         {/* End of HubSpot Embed Code */}
       </body>
     </html>
