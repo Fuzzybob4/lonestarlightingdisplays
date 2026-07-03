@@ -16,18 +16,19 @@ export interface SeasonalContentData {
 }
 
 export function getCurrentSeason(): Season {
-  // Uncomment one of these lines to force a specific season:
+  // Force holiday season until January 15
+  return "holiday"
 
-  // return "holiday"; // Force holiday season
-  // return "general"; // Force general season
-
-  const today = new Date()
+  // Uncomment below and comment out the line above to use automatic date-based switching:
+  // const today = new Date()
   const month = today.getMonth() + 1 // JavaScript months are 0-indexed
   const day = today.getDate()
 
-  // Holiday season: August 16 - January 15
+  // Holiday season: June 1 - January 15
   if (
-    (month === 8 && day >= 16) || // August 16 or later
+    month === 6 || // All of June
+    month === 7 || // All of July
+    month === 8 || // All of August
     month === 9 || // All of September
     month === 10 || // All of October
     month === 11 || // All of November
@@ -37,7 +38,7 @@ export function getCurrentSeason(): Season {
     return "holiday"
   }
 
-  // General season: January 16 - August 15
+  // General season: January 16 - May 31
   return "general"
 }
 
