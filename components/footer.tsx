@@ -54,36 +54,36 @@ export default function Footer() {
           </div>
 
           <div>
-            <h3 className="text-base font-medium mb-4">Quick Links</h3>
+            <h3 className="text-base font-medium mb-4">Services</h3>
             <ul className="space-y-2 text-sm">
               <li>
-                <Link href="/services" className="text-muted-foreground hover:text-primary">
-                  Services
+                <Link href="/services/christmas-lighting" className="text-muted-foreground hover:text-primary">
+                  Christmas Lighting
                 </Link>
               </li>
               <li>
-                <Link href="/loyalty" className="text-muted-foreground hover:text-primary">
-                  Loyalty Program
+                <Link href="/services/permanent-lighting" className="text-muted-foreground hover:text-primary">
+                  Permanent Lighting
                 </Link>
               </li>
               <li>
-                <Link href="/booking" className="text-muted-foreground hover:text-primary">
-                  Book Now
+                <Link href="/services/roofline-lighting" className="text-muted-foreground hover:text-primary">
+                  Roofline Lighting
                 </Link>
               </li>
               <li>
-                <Link href="/user/dashboard" className="text-muted-foreground hover:text-primary">
-                  User Dashboard
+                <Link href="/services/tree-wrapping" className="text-muted-foreground hover:text-primary">
+                  Tree Wrapping
                 </Link>
               </li>
               <li>
-                <Link href="/blog" className="text-muted-foreground hover:text-primary">
-                  Blog
+                <Link href="/services/removal-and-storage" className="text-muted-foreground hover:text-primary">
+                  Removal & Storage
                 </Link>
               </li>
               <li>
-                <Link href="/terms" className="text-muted-foreground hover:text-primary">
-                  Terms & Policies
+                <Link href="/commercial" className="text-muted-foreground hover:text-primary font-medium">
+                  Commercial Lighting
                 </Link>
               </li>
             </ul>
@@ -108,13 +108,18 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/service-areas/san-marcos" className="text-muted-foreground hover:text-primary">
-                  San Marcos
+                <Link href="/service-areas/cedar-park" className="text-muted-foreground hover:text-primary">
+                  Cedar Park
                 </Link>
               </li>
               <li>
-                <Link href="/service-areas/dripping-springs" className="text-muted-foreground hover:text-primary">
-                  Dripping Springs
+                <Link href="/service-areas/round-rock" className="text-muted-foreground hover:text-primary">
+                  Round Rock
+                </Link>
+              </li>
+              <li>
+                <Link href="/service-areas/georgetown" className="text-muted-foreground hover:text-primary">
+                  Georgetown
                 </Link>
               </li>
               <li>
