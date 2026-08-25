@@ -14,7 +14,7 @@ import "./globals.css"
 const inter = Inter({ subsets: ["latin"], variable: "--font-body" })
 const dmSans = DM_Sans({ subsets: ["latin"], variable: "--font-heading" })
 
-export const viewport = { width: "device-width", initialScale: 1, maximumScale: 1, themeColor: "#fbfaf7" }
+export const viewport = { width: "device-width", initialScale: 1, maximumScale: 1, themeColor: "#ffffff" }
 
 export const metadata: Metadata = {
   metadataBase: new URL(BUSINESS_INFO.url),
