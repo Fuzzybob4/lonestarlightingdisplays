@@ -1,6 +1,6 @@
 import type React from "react"
 import type { Metadata } from "next"
-import { Inter } from "next/font/google"
+import { Inter, DM_Sans } from "next/font/google"
 import { ThemeProvider } from "@/components/theme-provider"
 import Header from "@/components/header"
 import Footer from "@/components/footer"
@@ -11,7 +11,10 @@ import { localBusinessSchema, webSiteSchema } from "@/lib/structured-data"
 import { BUSINESS_INFO } from "@/lib/business-info"
 import "./globals.css"
 
-const inter = Inter({ subsets: ["latin"] })
+const inter = Inter({ subsets: ["latin"], variable: "--font-body" })
+const dmSans = DM_Sans({ subsets: ["latin"], variable: "--font-heading" })
+
+export const viewport = { width: "device-width", initialScale: 1, maximumScale: 1, themeColor: "#f8f6f0" }
 
 export const metadata: Metadata = {
   metadataBase: new URL(BUSINESS_INFO.url),
@@ -46,10 +49,10 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" suppressHydrationWarning>
-      <body className={inter.className}>
+    <html lang="en" className="bg-background" suppressHydrationWarning>
+      <body className={`${inter.variable} ${dmSans.variable} font-sans`}>
         <JsonLd id="json-ld-global" data={[localBusinessSchema(), webSiteSchema()]} />
-        <ThemeProvider attribute="class" defaultTheme="dark" enableSystem disableTransitionOnChange>
+        <ThemeProvider attribute="class" defaultTheme="light" enableSystem disableTransitionOnChange>
           <ScrollToTop />
           <div className="flex min-h-screen flex-col">
             <Header />

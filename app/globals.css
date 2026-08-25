@@ -3,66 +3,75 @@
 @tailwind utilities;
 
 :root {
-  --background: 0 0% 100%;
-  --foreground: 222.2 84% 4.9%;
-  --card: 0 0% 100%;
-  --card-foreground: 222.2 84% 4.9%;
-  --popover: 0 0% 100%;
-  --popover-foreground: 222.2 84% 4.9%;
-  --primary: 222.2 47.4% 11.2%;
-  --primary-foreground: 210 40% 98%;
-  --secondary: 210 40% 96.1%;
-  --secondary-foreground: 222.2 47.4% 11.2%;
-  --muted: 210 40% 96.1%;
-  --muted-foreground: 215.4 16.3% 46.9%;
-  --accent: 210 40% 96.1%;
-  --accent-foreground: 222.2 47.4% 11.2%;
-  --destructive: 0 84.2% 60.2%;
-  --destructive-foreground: 210 40% 98%;
-  --border: 214.3 31.8% 91.4%;
-  --input: 214.3 31.8% 91.4%;
-  --ring: 222.2 84% 4.9%;
-  --chart-1: 12 76% 61%;
-  --chart-2: 173 58% 39%;
-  --chart-3: 197 37% 24%;
-  --chart-4: 43 74% 66%;
-  --chart-5: 27 87% 67%;
-  --radius: 0.5rem;
+  --background: 42 33% 97%;
+  --foreground: 216 31% 16%;
+  --card: 42 33% 99%;
+  --card-foreground: 216 31% 16%;
+  --popover: 42 33% 99%;
+  --popover-foreground: 216 31% 16%;
+  --primary: 216 31% 16%;
+  --primary-foreground: 42 33% 97%;
+  --secondary: 38 28% 91%;
+  --secondary-foreground: 216 31% 16%;
+  --muted: 38 28% 91%;
+  --muted-foreground: 216 12% 43%;
+  --accent: 42 65% 56%;
+  --accent-foreground: 216 31% 16%;
+  --destructive: 0 70% 50%;
+  --destructive-foreground: 42 33% 97%;
+  --border: 38 19% 83%;
+  --input: 38 19% 83%;
+  --ring: 42 65% 56%;
+  --radius: 0.2rem;
+  --ink: 216 31% 16%;
+  --ink-foreground: 42 33% 97%;
+  --gold: 42 65% 56%;
+  --surface: 38 28% 91%;
 }
 
 .dark {
-  --background: 222.2 84% 4.9%;
-  --foreground: 210 40% 98%;
-  --card: 222.2 84% 4.9%;
-  --card-foreground: 210 40% 98%;
-  --popover: 222.2 84% 4.9%;
-  --popover-foreground: 210 40% 98%;
-  --primary: 210 40% 98%;
-  --primary-foreground: 222.2 47.4% 11.2%;
-  --secondary: 217.2 32.6% 17.5%;
-  --secondary-foreground: 210 40% 98%;
-  --muted: 217.2 32.6% 17.5%;
-  --muted-foreground: 215 20.2% 65.1%;
-  --accent: 217.2 32.6% 17.5%;
-  --accent-foreground: 210 40% 98%;
-  --destructive: 0 62.8% 30.6%;
-  --destructive-foreground: 210 40% 98%;
-  --border: 217.2 32.6% 17.5%;
-  --input: 217.2 32.6% 17.5%;
-  --ring: 212.7 26.8% 83.9%;
-  --chart-1: 220 70% 50%;
-  --chart-2: 160 60% 45%;
-  --chart-3: 30 80% 55%;
-  --chart-4: 280 65% 60%;
-  --chart-5: 340 75% 55%;
+  --background: 216 31% 16%;
+  --foreground: 42 33% 97%;
+  --card: 216 28% 20%;
+  --card-foreground: 42 33% 97%;
+  --popover: 216 28% 20%;
+  --popover-foreground: 42 33% 97%;
+  --primary: 42 33% 97%;
+  --primary-foreground: 216 31% 16%;
+  --secondary: 216 22% 25%;
+  --secondary-foreground: 42 33% 97%;
+  --muted: 216 22% 25%;
+  --muted-foreground: 216 12% 72%;
+  --accent: 42 65% 56%;
+  --accent-foreground: 216 31% 16%;
+  --destructive: 0 62% 40%;
+  --destructive-foreground: 42 33% 97%;
+  --border: 216 18% 32%;
+  --input: 216 18% 32%;
+  --ring: 42 65% 56%;
+  --ink: 216 31% 16%;
+  --ink-foreground: 42 33% 97%;
+  --gold: 42 65% 56%;
+  --surface: 216 22% 25%;
 }
 
 @layer base {
-  /* Removed @apply border-border to fix utility class error */
-  * {
-    border-color: hsl(var(--border));
-  }
-  body {
-    @apply bg-background text-foreground;
-  }
+  * { border-color: hsl(var(--border)); }
+  html { background: hsl(var(--background)); }
+  body { @apply bg-background text-foreground; }
+  a, button { -webkit-tap-highlight-color: transparent; }
+}
+
+@layer utilities {
+  .bg-ink { background-color: hsl(var(--ink)); }
+  .text-ink-foreground { color: hsl(var(--ink-foreground)); }
+  .bg-gold { background-color: hsl(var(--gold)); }
+  .text-gold { color: hsl(var(--gold)); }
+  .bg-surface { background-color: hsl(var(--surface)); }
+  .bg-hero-scrim { background: linear-gradient(90deg, hsl(var(--ink) / .96) 0%, hsl(var(--ink) / .72) 48%, hsl(var(--ink) / .28) 100%); }
+  .eyebrow { @apply text-xs font-bold uppercase tracking-[0.18em] text-primary; }
+}
+
+@media (max-width: 640px) {
+  input, textarea, select { font-size: 16px !important; }
 }
