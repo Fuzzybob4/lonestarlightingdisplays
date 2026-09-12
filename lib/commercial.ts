@@ -16,8 +16,8 @@ export const COMMERCIAL_PAGES: ServiceDetail[] = [
     heroTitle: "HOA & Community Holiday Lighting",
     heroSubtitle:
       "Make a brilliant first impression at every entrance. Turnkey holiday lighting for HOAs, master-planned communities, and property management groups.",
-    heroImage: "/images/christmas-lighting.jpeg",
-    secondaryImage: "/images/christmas-elegant.png",
+    heroImage: "/images/premium-hoa-entrance.png",
+    secondaryImage: "/images/premium-landscape-garden.png",
     intro:
       "Your community's entrances, monuments, and common areas set the tone for the entire neighborhood during the holidays. Lone Star Lighting Displays partners with HOAs and property managers across Central Texas to deliver consistent, professional displays that residents love and boards can budget with confidence. We handle design, installation, in-season maintenance, takedown, and storage — all under one fully insured, contract-ready agreement.",
     benefits: [
@@ -62,8 +62,8 @@ export const COMMERCIAL_PAGES: ServiceDetail[] = [
     heroTitle: "Shopping Center & Retail Holiday Lighting",
     heroSubtitle:
       "Turn holiday shoppers into customers. Eye-catching commercial displays for shopping centers, strip malls, and retail storefronts.",
-    heroImage: "/images/christmas-colorful.jpeg",
-    secondaryImage: "/images/advanced-package.png",
+    heroImage: "/images/premium-commercial-storefront.png",
+    secondaryImage: "/images/premium-office-building.png",
     intro:
       "The holidays are the most important season of the year for retail. A professionally lit shopping center draws shoppers in, extends dwell time, and creates the festive atmosphere customers expect. Lone Star Lighting Displays designs and installs commercial-grade displays for shopping centers and retail properties across Central Texas — from rooflines and entrances to tree wrapping and walkways — with minimal disruption to business hours.",
     benefits: [
@@ -108,8 +108,8 @@ export const COMMERCIAL_PAGES: ServiceDetail[] = [
     heroTitle: "Restaurant & Hospitality Holiday Lighting",
     heroSubtitle:
       "Set the mood that fills tables. Warm, festive lighting for restaurants, bars, patios, and hospitality venues.",
-    heroImage: "/images/event-lighting.png",
-    secondaryImage: "/images/event-dramatic.png",
+    heroImage: "/images/premium-restaurant-patio.png",
+    secondaryImage: "/images/premium-event-lighting.png",
     intro:
       "Atmosphere is everything in hospitality. The right holiday lighting makes your restaurant or bar the place people want to be all season long — cozy patios, glowing entrances, and warm dining rooms that photograph beautifully and keep guests lingering. Lone Star Lighting Displays creates custom holiday environments for Central Texas restaurants and venues, with installation scheduled around your service hours.",
     benefits: [
@@ -154,8 +154,8 @@ export const COMMERCIAL_PAGES: ServiceDetail[] = [
     heroTitle: "Apartment & Multifamily Holiday Lighting",
     heroSubtitle:
       "Boost resident satisfaction and leasing appeal. Professional holiday lighting for apartment communities and multifamily properties.",
-    heroImage: "/images/christmas-elegant.png",
-    secondaryImage: "/images/christmas-lighting.jpeg",
+    heroImage: "/images/premium-apartment-clubhouse.png",
+    secondaryImage: "/images/premium-hoa-entrance.png",
     intro:
       "Holiday lighting is an easy win for apartment communities — it delights current residents, photographs beautifully for leasing marketing, and signals a well-managed property to prospects touring during the season. Lone Star Lighting Displays works with property managers and ownership groups across Central Texas to light leasing offices, entrances, clubhouses, and amenity areas, all under one insured, hassle-free agreement.",
     benefits: [
@@ -200,8 +200,8 @@ export const COMMERCIAL_PAGES: ServiceDetail[] = [
     heroTitle: "Church & Place of Worship Holiday Lighting",
     heroSubtitle:
       "Celebrate the season with a warm, welcoming display. Professional Christmas lighting for churches and places of worship.",
-    heroImage: "/images/christmas-lighting.jpeg",
-    secondaryImage: "/images/basic-package.png",
+    heroImage: "/images/premium-church-steeple.png",
+    secondaryImage: "/images/premium-tower-tree.png",
     intro:
       "The holiday season is a meaningful time for congregations, and a beautiful display welcomes members and visitors alike to your services and events. Lone Star Lighting Displays helps churches and places of worship across Central Texas create warm, dignified holiday lighting — from rooflines and steeples to entrances, walkways, and grounds — with budget-conscious proposals and reliable, fully insured service.",
     benefits: [

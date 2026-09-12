@@ -13,6 +13,7 @@ const navigation = [
   { name: "Services", href: "/services" },
   { name: "Commercial", href: "/commercial" },
   { name: "Service Areas", href: "/service-areas" },
+  { name: "Our Work", href: "/gallery" },
   { name: "About", href: "/about" },
 ]
 

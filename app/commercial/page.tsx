@@ -51,7 +51,7 @@ export default function CommercialPage() {
       <section className="relative">
         <div className="absolute inset-0">
           <Image
-            src="/images/christmas-colorful.jpeg"
+            src="/images/premium-office-building.png"
             alt="Commercial holiday lighting in Austin, Texas"
             fill
             priority

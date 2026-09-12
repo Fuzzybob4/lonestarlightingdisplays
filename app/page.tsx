@@ -4,9 +4,9 @@ import { ArrowRight, Check, MapPin, Phone, ShieldCheck, Sparkles, Star, Truck } 
 import { Button } from "@/components/ui/button"
 
 const projects = [
-  { image: "/images/christmas-lighting.jpeg", alt: "Warm white roofline lighting on a Texas home", label: "Residential" },
-  { image: "/images/christmas-elegant.png", alt: "Elegant holiday lighting display", label: "Custom design" },
-  { image: "/images/event-professional.jpeg", alt: "Professional lighting for an outdoor event", label: "Commercial" },
+  { image: "/images/premium-estate-hero.png", alt: "Warm white roofline lighting on an upscale Texas home", label: "Residential" },
+  { image: "/images/premium-tower-tree.png", alt: "A massive mature tree wrapped trunk to canopy in lights", label: "Tree wrapping" },
+  { image: "/images/premium-commercial-storefront.png", alt: "Commercial storefront lit for the holidays", label: "Commercial" },
 ]
 
 const services = [
@@ -19,7 +19,7 @@ export default function Home() {
   return (
     <div className="overflow-hidden">
       <section className="relative isolate min-h-[720px] bg-ink text-ink-foreground">
-        <Image src="/images/hero-christmas-lighting.png" alt="Professionally lit Texas home at night" fill priority className="object-cover object-center opacity-70" sizes="100vw" />
+        <Image src="/images/premium-hillcountry-estate.png" alt="Professionally lit upscale Texas home at dusk" fill priority className="object-cover object-center opacity-70" sizes="100vw" />
         <div className="absolute inset-0 bg-hero-scrim" />
         <div className="relative mx-auto flex min-h-[720px] max-w-7xl flex-col justify-end px-5 pb-14 pt-28 sm:px-8 lg:justify-center lg:pb-20">
           <div className="max-w-3xl">
