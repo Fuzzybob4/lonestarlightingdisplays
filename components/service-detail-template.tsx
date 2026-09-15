@@ -52,7 +52,7 @@ export function ServiceDetailTemplate({
         <div className="absolute inset-0">
           <Image
             src={data.heroImage || "/placeholder.svg"}
-            alt={`${data.name} in ${BUSINESS_INFO.address.addressLocality}, Texas`}
+            alt={`${data.name} in Central Texas`}
             fill
             priority
             className="object-cover"
@@ -162,7 +162,7 @@ export function ServiceDetailTemplate({
       </section>
 
       {/* Proof */}
-      <CityTestimonials city={BUSINESS_INFO.address.addressLocality} />
+      <CityTestimonials city="Central Texas" />
 
       {/* FAQs */}
       <section className="py-12 md:py-20">

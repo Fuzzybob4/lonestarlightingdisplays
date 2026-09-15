@@ -22,23 +22,8 @@ export function localBusinessSchema() {
     url: SITE_URL,
     telephone: BUSINESS_INFO.telephone,
     email: BUSINESS_INFO.email,
-    priceRange: BUSINESS_INFO.priceRange,
-    foundingDate: BUSINESS_INFO.foundingYear,
     image: absoluteUrl(BUSINESS_INFO.image),
     logo: absoluteUrl(BUSINESS_INFO.logo),
-    address: {
-      "@type": "PostalAddress",
-      streetAddress: BUSINESS_INFO.address.streetAddress,
-      addressLocality: BUSINESS_INFO.address.addressLocality,
-      addressRegion: BUSINESS_INFO.address.addressRegion,
-      postalCode: BUSINESS_INFO.address.postalCode,
-      addressCountry: BUSINESS_INFO.address.addressCountry,
-    },
-    geo: {
-      "@type": "GeoCoordinates",
-      latitude: BUSINESS_INFO.geo.latitude,
-      longitude: BUSINESS_INFO.geo.longitude,
-    },
     areaServed: BUSINESS_INFO.areaServed.map((name) => ({
       "@type": "City",
       name,
@@ -49,28 +34,7 @@ export function localBusinessSchema() {
       opens: spec.opens,
       closes: spec.closes,
     })),
-    aggregateRating: {
-      "@type": "AggregateRating",
-      ratingValue: BUSINESS_INFO.aggregateRating.ratingValue,
-      reviewCount: BUSINESS_INFO.aggregateRating.reviewCount,
-    },
     sameAs: BUSINESS_INFO.sameAs,
-    potentialAction: {
-      "@type": "ReserveAction",
-      target: {
-        "@type": "EntryPoint",
-        urlTemplate: BUSINESS_INFO.bookingUrl,
-        inLanguage: "en-US",
-        actionPlatform: [
-          "http://schema.org/DesktopWebPlatform",
-          "http://schema.org/MobileWebPlatform",
-        ],
-      },
-      result: {
-        "@type": "Reservation",
-        name: "Free Christmas Lighting Estimate",
-      },
-    },
   }
 }
 
