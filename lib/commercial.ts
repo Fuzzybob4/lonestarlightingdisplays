@@ -22,7 +22,7 @@ export const COMMERCIAL_PAGES: ServiceDetail[] = [
       "Your community's entrances, monuments, and common areas set the tone for the entire neighborhood during the holidays. Lone Star Lighting Displays partners with HOAs and property managers across Central Texas to deliver consistent, professional displays that residents love and boards can budget with confidence. We handle design, installation, in-season maintenance, takedown, and storage — all under one fully insured, contract-ready agreement.",
     benefits: [
       { title: "Single Point of Contact", description: "One dedicated account manager for your entire community — no chasing multiple vendors." },
-      { title: "Fully Insured & Bonded", description: "Certificates of insurance provided up front to satisfy board and management requirements." },
+      { title: "Fully Insured", description: "Certificates of insurance can be provided for board and management requirements." },
       { title: "Budget-Friendly Contracts", description: "Multi-year agreements with locked pricing make holiday lighting easy to plan and approve." },
       { title: "Consistent Brand Look", description: "Cohesive design across every entrance, monument, and amenity center for a polished community image." },
     ],
