@@ -42,7 +42,6 @@ export default function ContactForm() {
     // Simulate API call
     await new Promise((resolve) => setTimeout(resolve, 1500))
 
-    console.log(data)
     setIsSubmitting(false)
     setIsSubmitted(true)
   }

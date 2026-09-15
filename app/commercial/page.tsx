@@ -26,7 +26,7 @@ export const metadata: Metadata = {
 }
 
 const WHY = [
-  "Fully insured & bonded",
+  "Fully insured",
   "Certificates of insurance provided",
   "Commercial-grade products",
   "Multi-year contract options",
