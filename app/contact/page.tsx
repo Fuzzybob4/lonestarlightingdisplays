@@ -92,8 +92,7 @@ export default function ContactPage() {
                 <div>
                   <p className="font-medium">What areas do you serve?</p>
                   <p className="text-sm text-muted-foreground mt-1">
-                    We currently serve the greater Austin, San Antonio, and Houston areas. Contact us to confirm service
-                    in your specific location.
+                    We currently focus on Kyle, Buda, San Marcos, South Austin, and nearby Central Texas communities. Contact us to confirm service in your specific location.
                   </p>
                 </div>
                 <div>

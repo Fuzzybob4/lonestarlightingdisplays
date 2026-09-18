@@ -9,7 +9,7 @@ import { getCurrentSeason } from "@/lib/get-season"
 
 export function SeasonalServicesPage() {
   const season = getCurrentSeason()
-  const isChristmasSeason = season === "christmas"
+  const isChristmasSeason = season === "holiday"
 
   return (
     <div className="flex flex-col">
