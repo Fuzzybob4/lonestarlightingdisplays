@@ -64,7 +64,7 @@ export function SeasonalServicesPage() {
                 </CardHeader>
                 <CardContent>
                   <div className="mb-6">
-                    <div className="text-3xl font-bold mb-2">Starting at $299</div>
+                    <div className="text-3xl font-bold mb-2">Starting at $600</div>
                     <p className="text-muted-foreground">Perfect for smaller homes</p>
                   </div>
                   <ul className="space-y-3 mb-6">
@@ -109,7 +109,7 @@ export function SeasonalServicesPage() {
                 </CardHeader>
                 <CardContent>
                   <div className="mb-6">
-                    <div className="text-3xl font-bold mb-2">Starting at $599</div>
+                    <div className="text-3xl font-bold mb-2">Starting at $1,200</div>
                     <p className="text-muted-foreground">Most popular choice</p>
                   </div>
                   <ul className="space-y-3 mb-6">
@@ -154,7 +154,7 @@ export function SeasonalServicesPage() {
                 </CardHeader>
                 <CardContent>
                   <div className="mb-6">
-                    <div className="text-3xl font-bold mb-2">Starting at $999</div>
+                    <div className="text-3xl font-bold mb-2">Starting at $2,500</div>
                     <p className="text-muted-foreground">Ultimate display experience</p>
                   </div>
                   <ul className="space-y-3 mb-6">
