@@ -98,7 +98,7 @@ export const CITIES: CityData[] = [
     county: "Hays County",
     established: "2021",
     customers: "200+",
-    heroImage: "/images/christmas-elegant.png",
+    heroImage: "/images/buda-lighting-displays.png",
     secondaryImage: "/images/advanced-package.png",
     proximity: "Just 15 miles south of Austin along I-35",
     intro:
