@@ -24,7 +24,7 @@ export default function Home() {
         <div className="relative mx-auto flex min-h-[720px] max-w-7xl flex-col justify-end px-5 pb-14 pt-28 sm:px-8 lg:justify-center lg:pb-20">
           <div className="max-w-3xl">
             <div className="mb-6 inline-flex items-center gap-2 border border-ink-foreground/30 bg-ink/30 px-3 py-2 text-xs font-semibold uppercase tracking-[0.18em] text-gold backdrop-blur-sm"><Sparkles className="h-4 w-4" /> Central Texas lighting pros</div>
-            <h1 className="max-w-3xl text-balance text-5xl font-bold leading-[0.98] tracking-[-0.04em] sm:text-6xl lg:text-8xl">Christmas light installation in <span className="text-gold">Kyle, Buda & South Austin.</span></h1>
+            <h1 className="max-w-3xl text-balance text-5xl font-bold leading-[0.98] tracking-[-0.04em] sm:text-6xl lg:text-8xl">Christmas light installation in <span className="text-gold">Austin & Central Texas.</span></h1>
             <p className="mt-6 max-w-xl text-pretty text-lg leading-8 text-ink-foreground/80 sm:text-xl">Professional holiday lighting designed, installed, maintained, and removed by a local team with 10+ years of lighting experience.</p>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row"><Button size="lg" className="min-h-12 bg-gold px-6 text-ink hover:bg-gold/90" asChild><Link href="/booking">Get a free estimate <ArrowRight className="ml-2 h-4 w-4" /></Link></Button><Button size="lg" variant="outline" className="min-h-12 border-ink-foreground/50 bg-ink/20 px-6 text-ink-foreground hover:bg-ink-foreground/10" asChild><a href="tel:+15127713091"><Phone className="mr-2 h-4 w-4" /> (512) 771-3091</a></Button></div>
           </div>
