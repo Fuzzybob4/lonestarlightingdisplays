@@ -27,7 +27,7 @@ const serviceAreas = [
     slug: "buda",
     description: "Garlic Creek, Sunfield, and all Buda neighborhoods",
     neighborhoods: ["Garlic Creek", "Sunfield", "Buda Mill Creek", "Elm Grove"],
-    image: "/images/christmas-elegant.png",
+    image: "/images/buda-residential-lighting.png",
     established: "2021",
     customers: "200+",
   },
