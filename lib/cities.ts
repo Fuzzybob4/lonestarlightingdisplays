@@ -157,7 +157,7 @@ export const CITIES: CityData[] = [
     established: "2021",
     customers: "300+",
     heroImage: "/images/advanced-package.png",
-    secondaryImage: "/images/christmas-colorful.jpeg",
+    secondaryImage: "/images/kyle-residential-lighting.png",
     proximity: "20 miles south of Austin on the I-35 corridor",
     intro:
       "Professional holiday lighting in Kyle, TX. From Plum Creek to Waterleaf, we handle the design, installation, and removal of stunning Christmas displays for homes and businesses.",
