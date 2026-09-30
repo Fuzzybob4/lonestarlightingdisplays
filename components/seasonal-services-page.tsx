@@ -1,7 +1,7 @@
 "use client"
 
 import Link from "next/link"
-import Image from "next/image"
+import { SiteImage } from "@/components/site-image"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Star, Sparkles, Home, Trees, Shield, PartyPopper, Heart, Calendar, ArrowRight } from "lucide-react"
@@ -58,7 +58,7 @@ export function SeasonalServicesPage() {
                 </div>
                 <CardHeader>
                   <div className="relative h-48 mb-4 rounded-lg overflow-hidden">
-                    <Image src="/images/basic-package.png" alt="Basic Holiday Package" fill className="object-cover" />
+                    <SiteImage slot="services-basic" src="/images/basic-package.png" alt="Basic Holiday Package" fill className="object-cover" />
                   </div>
                   <CardTitle className="text-2xl">Basic Package</CardTitle>
                 </CardHeader>
@@ -98,7 +98,7 @@ export function SeasonalServicesPage() {
                 </div>
                 <CardHeader>
                   <div className="relative h-48 mb-4 rounded-lg overflow-hidden">
-                    <Image
+                    <SiteImage slot="services-advanced"
                       src="/images/advanced-package.png"
                       alt="Advanced Holiday Package"
                       fill
@@ -143,7 +143,7 @@ export function SeasonalServicesPage() {
                 </div>
                 <CardHeader>
                   <div className="relative h-48 mb-4 rounded-lg overflow-hidden">
-                    <Image
+                    <SiteImage slot="services-gingerbread"
                       src="/images/gingerbread-package.png"
                       alt="Gingerbread Premium Package"
                       fill
@@ -200,7 +200,7 @@ export function SeasonalServicesPage() {
             <Card className="group hover:shadow-xl transition-all hover:-translate-y-1">
               <CardHeader>
                 <div className="relative h-48 mb-4 rounded-lg overflow-hidden">
-                  <Image
+                  <SiteImage slot="services-christmas"
                     src="/images/christmas-lighting.jpeg"
                     alt="Christmas Lighting"
                     fill
@@ -230,7 +230,7 @@ export function SeasonalServicesPage() {
             <Card className="group hover:shadow-xl transition-all hover:-translate-y-1">
               <CardHeader>
                 <div className="relative h-48 mb-4 rounded-lg overflow-hidden">
-                  <Image
+                  <SiteImage slot="services-landscape"
                     src="/images/landscape-lighting.png"
                     alt="Landscape Lighting"
                     fill
@@ -260,7 +260,7 @@ export function SeasonalServicesPage() {
             <Card className="group hover:shadow-xl transition-all hover:-translate-y-1">
               <CardHeader>
                 <div className="relative h-48 mb-4 rounded-lg overflow-hidden">
-                  <Image
+                  <SiteImage slot="services-security"
                     src="/images/security-lighting.png"
                     alt="Security Lighting"
                     fill
@@ -290,7 +290,7 @@ export function SeasonalServicesPage() {
             <Card className="group hover:shadow-xl transition-all hover:-translate-y-1">
               <CardHeader>
                 <div className="relative h-48 mb-4 rounded-lg overflow-hidden">
-                  <Image
+                  <SiteImage slot="services-event"
                     src="/images/event-lighting.png"
                     alt="Event Lighting"
                     fill
@@ -320,7 +320,7 @@ export function SeasonalServicesPage() {
             <Card className="group hover:shadow-xl transition-all hover:-translate-y-1">
               <CardHeader>
                 <div className="relative h-48 mb-4 rounded-lg overflow-hidden">
-                  <Image
+                  <SiteImage slot="services-wedding"
                     src="/images/wedding-lighting.jpeg"
                     alt="Wedding Lighting"
                     fill
@@ -350,7 +350,7 @@ export function SeasonalServicesPage() {
             <Card className="group hover:shadow-xl transition-all hover:-translate-y-1">
               <CardHeader>
                 <div className="relative h-48 mb-4 rounded-lg overflow-hidden">
-                  <Image
+                  <SiteImage slot="services-outdoor"
                     src="/images/patio.png"
                     alt="Outdoor Living Lighting"
                     fill

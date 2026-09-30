@@ -1,5 +1,5 @@
 import Link from "next/link"
-import Image from "next/image"
+import { SiteImage } from "@/components/site-image"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { MapPin, Phone, Clock, Star } from "lucide-react"
@@ -112,7 +112,7 @@ export default function ServiceAreasPage() {
       <section className="relative">
         <div className="absolute inset-0 bg-gradient-to-b from-background/20 to-background/60 z-10" />
         <div className="relative h-[400px] w-full">
-          <Image
+          <SiteImage slot="areas-hero"
             src="/images/hero-christmas-lighting.png"
             alt="Christmas Light Installation Service Areas"
             fill
@@ -148,7 +148,7 @@ export default function ServiceAreasPage() {
             <Card key={area.slug} className="overflow-hidden">
               <div className={`grid grid-cols-1 gap-8 md:grid-cols-2 ${index % 2 === 1 ? "md:flex-row-reverse" : ""}`}>
                 <div className={`relative h-[300px] ${index % 2 === 1 ? "md:order-2" : ""}`}>
-                  <Image
+                  <SiteImage slot={`areas-card-${area.slug}`}
                     src={area.image || "/placeholder.svg"}
                     alt={`${area.city} Christmas Lighting`}
                     fill
@@ -282,7 +282,7 @@ export default function ServiceAreasPage() {
             </div>
           </div>
           <div className="relative h-[400px] rounded-lg overflow-hidden">
-            <Image
+            <SiteImage slot="areas-team"
               src="/images/christmas-elegant.png"
               alt="Local Christmas Light Installation Team"
               fill

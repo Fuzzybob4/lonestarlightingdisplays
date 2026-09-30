@@ -1,5 +1,5 @@
 import Link from "next/link"
-import Image from "next/image"
+import { SiteImage } from "@/components/site-image"
 import type { Metadata } from "next"
 import { ArrowRight, Building2, Check, Phone } from "lucide-react"
 import { Button } from "@/components/ui/button"
@@ -50,7 +50,7 @@ export default function CommercialPage() {
       {/* Hero */}
       <section className="relative">
         <div className="absolute inset-0">
-          <Image
+          <SiteImage slot="commercial-hero"
             src="/images/premium-office-building.png"
             alt="Commercial holiday lighting in Austin, Texas"
             fill
@@ -103,7 +103,7 @@ export default function CommercialPage() {
             {COMMERCIAL_PAGES.map((page) => (
               <Card key={page.slug} className="overflow-hidden">
                 <div className="relative aspect-[16/10]">
-                  <Image
+                  <SiteImage slot={`commercial-${page.slug}-hero`}
                     src={page.heroImage || "/placeholder.svg"}
                     alt={page.name}
                     fill

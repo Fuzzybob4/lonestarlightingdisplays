@@ -1,5 +1,5 @@
 import Link from "next/link"
-import Image from "next/image"
+import { SiteImage } from "@/components/site-image"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { CheckCircle, MapPin, Star, Phone, Clock, Award, ArrowRight } from "lucide-react"
@@ -88,7 +88,7 @@ export function CityPageTemplate({ data }: { data: CityData }) {
       <section className="relative">
         <div className="absolute inset-0 bg-gradient-to-b from-background/20 to-background/60 z-10" />
         <div className="relative h-[500px] w-full">
-          <Image
+          <SiteImage slot={`city-${data.slug}-hero`}
             src={data.heroImage || "/placeholder.svg"}
             alt={`Christmas light installation in ${city}, Texas`}
             fill
@@ -188,7 +188,7 @@ export function CityPageTemplate({ data }: { data: CityData }) {
               </div>
             </div>
             <div className="relative h-[400px] rounded-lg overflow-hidden">
-              <Image
+              <SiteImage slot={`city-${data.slug}-secondary`}
                 src={data.secondaryImage || "/placeholder.svg"}
                 alt={`${city} Christmas light installation`}
                 fill

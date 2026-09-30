@@ -1,5 +1,5 @@
 import Link from "next/link"
-import Image from "next/image"
+import { SiteImage } from "@/components/site-image"
 import { Button } from "@/components/ui/button"
 import { CheckCircle, Gift, Snowflake, TreePine } from "lucide-react"
 
@@ -15,7 +15,7 @@ export default function ChristmasLightingPage() {
       <section className="relative">
         <div className="absolute inset-0 bg-gradient-to-b from-background/20 to-background/60 z-10" />
         <div className="relative h-[400px] w-full">
-          <Image
+          <SiteImage slot="xmas-hero"
             src="/images/christmas-elegant.png"
             alt="Christmas Lighting"
             fill
@@ -65,7 +65,7 @@ export default function ChristmasLightingPage() {
             </ul>
           </div>
           <div className="relative h-[400px] rounded-lg overflow-hidden">
-            <Image
+            <SiteImage slot="xmas-display"
               src="/images/christmas-colorful.jpeg"
               alt="Christmas lighting display"
               fill
@@ -135,7 +135,7 @@ export default function ChristmasLightingPage() {
             </div>
 
             <div className="relative h-[400px] rounded-lg overflow-hidden">
-              <Image
+              <SiteImage slot="xmas-install"
                 src="/images/christmas-elegant.png"
                 alt="Christmas lighting installation in Buda, Kyle, San Marcos, and South Austin"
                 fill

@@ -1,5 +1,5 @@
 import Link from "next/link"
-import Image from "next/image"
+import { SiteImage } from "@/components/site-image"
 import { Button } from "@/components/ui/button"
 import { CheckCircle, Calendar, Users, Zap } from "lucide-react"
 
@@ -15,7 +15,7 @@ export default function EventLightingPage() {
       <section className="relative">
         <div className="absolute inset-0 bg-gradient-to-b from-background/20 to-background/60 z-10" />
         <div className="relative h-[400px] w-full">
-          <Image
+          <SiteImage slot="event-hero"
             src="/images/event-string-lights.jpeg"
             alt="Event Lighting"
             fill
@@ -65,7 +65,7 @@ export default function EventLightingPage() {
             </ul>
           </div>
           <div className="relative h-[400px] rounded-lg overflow-hidden">
-            <Image src="/images/event-dramatic.png" alt="Corporate event lighting" fill className="object-cover" />
+            <SiteImage slot="event-corporate" src="/images/event-dramatic.png" alt="Corporate event lighting" fill className="object-cover" />
           </div>
         </div>
       </section>

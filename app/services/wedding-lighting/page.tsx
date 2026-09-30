@@ -1,5 +1,5 @@
 import Link from "next/link"
-import Image from "next/image"
+import { SiteImage } from "@/components/site-image"
 import { Button } from "@/components/ui/button"
 import { CheckCircle, Heart, Star, Sparkles } from "lucide-react"
 
@@ -16,7 +16,7 @@ export default function WeddingLightingPage() {
       <section className="relative">
         <div className="absolute inset-0 bg-gradient-to-b from-background/20 to-background/60 z-10" />
         <div className="relative h-[400px] w-full">
-          <Image
+          <SiteImage slot="wedding-hero"
             src="/images/wedding-header.jpeg"
             alt="Wedding Lighting"
             fill
@@ -66,7 +66,7 @@ export default function WeddingLightingPage() {
             </ul>
           </div>
           <div className="relative h-[400px] rounded-lg overflow-hidden">
-            <Image src="/images/wedding-ambiance.avif" alt="Wedding ceremony lighting" fill className="object-cover" />
+            <SiteImage slot="wedding-ceremony" src="/images/wedding-ambiance.avif" alt="Wedding ceremony lighting" fill className="object-cover" />
           </div>
         </div>
       </section>

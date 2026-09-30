@@ -10,6 +10,8 @@ import { HubSpotScript } from "@/components/hubspot-script"
 import { JsonLd } from "@/components/json-ld"
 import { localBusinessSchema, webSiteSchema } from "@/lib/structured-data"
 import { BUSINESS_INFO } from "@/lib/business-info"
+import { SiteImagesProvider } from "@/components/site-image"
+import { getImageOverrides } from "@/lib/site-images/store"
 import "./globals.css"
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-body" })
@@ -44,22 +46,25 @@ export const metadata: Metadata = {
     generator: 'v0.app'
 }
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: {
   children: React.ReactNode
 }) {
+  const imageOverrides = await getImageOverrides()
   return (
     <html lang="en" className="bg-background" suppressHydrationWarning>
       <body className={`${inter.variable} ${dmSans.variable} font-sans`}>
         <JsonLd id="json-ld-global" data={[localBusinessSchema(), webSiteSchema()]} />
         <ThemeProvider attribute="class" defaultTheme="light" enableSystem disableTransitionOnChange>
           <ScrollToTop />
-          <div className="flex min-h-screen flex-col">
-            <Header />
-            <main className="flex-1">{children}</main>
-            <Footer />
-          </div>
+          <SiteImagesProvider overrides={imageOverrides}>
+            <div className="flex min-h-screen flex-col">
+              <Header />
+              <main className="flex-1">{children}</main>
+              <Footer />
+            </div>
+          </SiteImagesProvider>
           <MobileActionBar />
         </ThemeProvider>
 
