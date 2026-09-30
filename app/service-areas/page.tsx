@@ -36,7 +36,7 @@ const serviceAreas = [
     slug: "kyle",
     description: "Plum Creek, Waterleaf, and Kyle residential areas",
     neighborhoods: ["Plum Creek", "Waterleaf", "Kyle Crossing", "Hometown Kyle"],
-    image: "/images/advanced-package.png",
+    image: "/images/kyle-residential-lighting.png",
     established: "2021",
     customers: "300+",
   },
