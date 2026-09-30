@@ -215,7 +215,7 @@ export const CITIES: CityData[] = [
     established: "2022",
     customers: "150+",
     heroImage: "/images/gingerbread-package.png",
-    secondaryImage: "/images/christmas-lighting.jpeg",
+    secondaryImage: "/images/san-marcos-holiday-lighting.png",
     proximity: "30 miles south of Austin, halfway to San Antonio",
     intro:
       "San Marcos holiday lighting from a team that knows the area. We bring professional Christmas light installation to historic downtown homes, river-area residences, and local businesses.",
