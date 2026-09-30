@@ -15,6 +15,19 @@ const services = [
   { title: "Commercial displays", copy: "Make your storefront, venue, or community the place everyone wants to visit this season.", href: "/commercial" },
 ]
 
+const serviceAreas = [
+  { name: "Austin", slug: "austin" },
+  { name: "Buda", slug: "buda" },
+  { name: "Kyle", slug: "kyle" },
+  { name: "San Marcos", slug: "san-marcos" },
+  { name: "Dripping Springs", slug: "dripping-springs" },
+  { name: "Lakeway", slug: "lakeway" },
+  { name: "Bee Cave", slug: "bee-cave" },
+  { name: "Cedar Park", slug: "cedar-park" },
+  { name: "Round Rock", slug: "round-rock" },
+  { name: "Georgetown", slug: "georgetown" },
+]
+
 export default function Home() {
   return (
     <div className="overflow-hidden">
@@ -29,6 +42,35 @@ export default function Home() {
             <div className="mt-8 flex flex-col gap-3 sm:flex-row"><Button size="lg" className="min-h-12 bg-gold px-6 text-ink hover:bg-gold/90" asChild><Link href="/booking">Get a free estimate <ArrowRight className="ml-2 h-4 w-4" /></Link></Button><Button size="lg" variant="outline" className="min-h-12 border-ink-foreground/50 bg-ink/20 px-6 text-ink-foreground hover:bg-ink-foreground/10" asChild><a href="tel:+15127713091"><Phone className="mr-2 h-4 w-4" /> (512) 771-3091</a></Button></div>
           </div>
           <div className="mt-14 flex flex-wrap gap-x-8 gap-y-3 border-t border-ink-foreground/20 pt-5 text-sm text-ink-foreground/75"><span className="flex items-center gap-2"><ShieldCheck className="h-4 w-4 text-gold" /> 10+ years of lighting experience</span><span className="flex items-center gap-2"><MapPin className="h-4 w-4 text-gold" /> Austin & Central Texas</span><span className="flex items-center gap-2"><Truck className="h-4 w-4 text-gold" /> Fully managed service</span></div>
+        </div>
+      </section>
+
+      <section className="border-b bg-surface px-5 py-8 sm:px-8">
+        <div className="mx-auto max-w-7xl">
+          <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:gap-6">
+            <p className="whitespace-nowrap text-sm font-bold uppercase tracking-[0.16em] text-primary">
+              Proudly serving Central Texas
+            </p>
+            <nav aria-label="Service areas" className="flex flex-wrap items-center gap-x-1 gap-y-2 text-sm">
+              {serviceAreas.map((area, index) => (
+                <span key={area.slug} className="flex items-center">
+                  <Link
+                    href={`/service-areas/${area.slug}`}
+                    className="px-2 py-1 font-medium text-muted-foreground transition-colors hover:text-gold"
+                  >
+                    {area.name}
+                  </Link>
+                  {index < serviceAreas.length - 1 && <span className="text-border">|</span>}
+                </span>
+              ))}
+              <Link
+                href="/service-areas"
+                className="ml-2 flex items-center gap-1 font-bold text-primary hover:text-gold"
+              >
+                View all service areas <ArrowRight className="h-3.5 w-3.5" />
+              </Link>
+            </nav>
+          </div>
         </div>
       </section>
 
