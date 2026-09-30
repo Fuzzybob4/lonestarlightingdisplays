@@ -12,7 +12,48 @@ import {
   type ImageOverrides,
 } from "@/lib/site-images/store"
 
+import { REVIEWS_DOC, REVIEWS_TAG, sanitizeReviews, type Review } from "@/lib/site-content/reviews"
+import { BLOG_DOC, BLOG_IMAGES_PREFIX, BLOG_TAG, sanitizeBlogPosts, type BlogPost } from "@/lib/site-content/blog"
+import { deleteUnreferencedBlobs, writeContentDoc } from "@/lib/site-content/store"
+
 export type LoginState = { error?: string }
+
+export type ContentSaveResult<T> = { ok: true; items: T[] } | { ok: false; error: string }
+
+export async function saveReviews(input: Review[]): Promise<ContentSaveResult<Review>> {
+  if (!isAdmin()) return { ok: false, error: "Your session expired. Please sign in again." }
+  const reviews = sanitizeReviews(input)
+  if (typeof reviews === "string") return { ok: false, error: reviews }
+
+  try {
+    await writeContentDoc(REVIEWS_DOC, reviews)
+  } catch (error) {
+    console.error("Failed to save reviews:", error)
+    return { ok: false, error: "Something went wrong while saving. Please try again." }
+  }
+
+  revalidateTag(REVIEWS_TAG)
+  revalidatePath("/", "layout")
+  return { ok: true, items: reviews }
+}
+
+export async function saveBlogPosts(input: BlogPost[]): Promise<ContentSaveResult<BlogPost>> {
+  if (!isAdmin()) return { ok: false, error: "Your session expired. Please sign in again." }
+  const posts = sanitizeBlogPosts(input)
+  if (typeof posts === "string") return { ok: false, error: posts }
+
+  try {
+    await writeContentDoc(BLOG_DOC, posts)
+    await deleteUnreferencedBlobs(BLOG_IMAGES_PREFIX, new Set(posts.map((post) => post.image)))
+  } catch (error) {
+    console.error("Failed to save blog posts:", error)
+    return { ok: false, error: "Something went wrong while saving. Please try again." }
+  }
+
+  revalidateTag(BLOG_TAG)
+  revalidatePath("/", "layout")
+  return { ok: true, items: posts }
+}
 
 export async function login(_prev: LoginState, formData: FormData): Promise<LoginState> {
   const email = String(formData.get("email") ?? "")

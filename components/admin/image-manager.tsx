@@ -4,13 +4,14 @@ import { useEffect, useMemo, useRef, useState } from "react"
 import Link from "next/link"
 import { useRouter } from "next/navigation"
 import { upload } from "@vercel/blob/client"
-import { CheckCircle2, ExternalLink, ImagePlus, LogOut, RotateCcw, Trash2, TriangleAlert } from "lucide-react"
+import { ExternalLink, ImagePlus, RotateCcw, Trash2 } from "lucide-react"
 import { Button } from "@/components/ui/button"
-import { logout, saveImageChanges, type ImageChange } from "@/app/admin/actions"
+import { SaveBar, type SaveStatus } from "@/components/admin/save-bar"
+import { saveImageChanges, type ImageChange } from "@/app/admin/actions"
 import type { ImagePageGroup, ImageSlot } from "@/lib/site-images/slots"
 
 type Pending = { type: "replace"; file: File; preview: string } | { type: "delete" }
-type Status = { kind: "success" | "error"; message: string } | null
+type Status = SaveStatus
 
 const MAX_BYTES = 15 * 1024 * 1024
 
@@ -131,28 +132,7 @@ export function ImageManager({
   }
 
   return (
-    <section className="bg-surface pb-32">
-      <div className="border-b bg-ink text-ink-foreground">
-        <div className="mx-auto flex max-w-7xl flex-col gap-6 px-5 py-10 sm:flex-row sm:items-end sm:justify-between sm:px-8">
-          <div>
-            <p className="eyebrow text-gold">Site admin</p>
-            <h1 className="mt-3 text-3xl font-bold tracking-tight sm:text-4xl">Website images</h1>
-            <p className="mt-2 max-w-xl text-pretty leading-7 text-ink-foreground/70">
-              Pick a page, replace or delete any image, then press Save. Deleting a custom image restores the
-              original photo.
-            </p>
-          </div>
-          <Button
-            type="button"
-            variant="outline"
-            onClick={() => logout()}
-            className="min-h-11 border-ink-foreground/30 bg-transparent text-ink-foreground hover:bg-ink-foreground/10"
-          >
-            <LogOut className="mr-2 h-4 w-4" aria-hidden="true" /> Sign out
-          </Button>
-        </div>
-      </div>
-
+    <section className="pb-32">
       <div className="mx-auto flex max-w-7xl flex-col gap-8 px-5 py-8 sm:px-8 lg:flex-row lg:items-start">
         <nav aria-label="Pages" className="lg:sticky lg:top-24 lg:w-72 lg:shrink-0">
           <label htmlFor="page-select" className="sr-only">
@@ -231,51 +211,18 @@ export function ImageManager({
         ) : null}
       </div>
 
-      <div className="fixed inset-x-0 bottom-0 z-40 border-t bg-background/95 backdrop-blur">
-        <div className="mx-auto flex max-w-7xl flex-col gap-3 px-5 py-4 sm:flex-row sm:items-center sm:justify-between sm:px-8">
-          <div aria-live="polite" className="min-h-6 text-sm">
-            {status ? (
-              <p
-                className={`flex items-center gap-2 font-medium ${
-                  status.kind === "success" ? "text-primary" : "text-destructive"
-                }`}
-              >
-                {status.kind === "success" ? (
-                  <CheckCircle2 className="h-4 w-4 shrink-0 text-gold" aria-hidden="true" />
-                ) : (
-                  <TriangleAlert className="h-4 w-4 shrink-0" aria-hidden="true" />
-                )}
-                {status.message}
-              </p>
-            ) : (
-              <p className="text-muted-foreground">
-                {pendingCount === 0
-                  ? "No unsaved changes."
-                  : `${pendingCount} unsaved ${pendingCount === 1 ? "change" : "changes"}.`}
-              </p>
-            )}
-          </div>
-          <div className="flex gap-3">
-            <Button
-              type="button"
-              variant="outline"
-              className="min-h-11"
-              onClick={discardAll}
-              disabled={pendingCount === 0 || saving}
-            >
-              Discard
-            </Button>
-            <Button
-              type="button"
-              className="min-h-11 min-w-32 bg-gold text-ink hover:bg-gold/90"
-              onClick={handleSave}
-              disabled={pendingCount === 0 || saving}
-            >
-              {saving ? "Saving..." : "Save changes"}
-            </Button>
-          </div>
-        </div>
-      </div>
+      <SaveBar
+        status={status}
+        dirty={pendingCount > 0}
+        idleMessage={
+          pendingCount === 0
+            ? "No unsaved changes."
+            : `${pendingCount} unsaved ${pendingCount === 1 ? "change" : "changes"}.`
+        }
+        saving={saving}
+        onDiscard={discardAll}
+        onSave={handleSave}
+      />
     </section>
   )
 }
