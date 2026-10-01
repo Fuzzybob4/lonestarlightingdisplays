@@ -1,0 +1,77 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 0 0% 100%;
+  --foreground: 222 47% 11%;
+  --card: 0 0% 100%;
+  --card-foreground: 222 47% 11%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 222 47% 11%;
+  --primary: 222 47% 11%;
+  --primary-foreground: 0 0% 100%;
+  --secondary: 214 32% 91%;
+  --secondary-foreground: 222 47% 11%;
+  --muted: 214 32% 94%;
+  --muted-foreground: 222 18% 40%;
+  --accent: 0 72% 46%;
+  --accent-foreground: 0 0% 100%;
+  --destructive: 0 72% 46%;
+  --destructive-foreground: 0 0% 100%;
+  --border: 214 25% 84%;
+  --input: 214 25% 84%;
+  --ring: 0 72% 46%;
+  --radius: 0.2rem;
+  --ink: 222 47% 11%;
+  --ink-foreground: 0 0% 100%;
+  --gold: 0 72% 46%;
+  --surface: 214 32% 94%;
+}
+
+.dark {
+  --background: 222 47% 11%;
+  --foreground: 0 0% 100%;
+  --card: 222 42% 15%;
+  --card-foreground: 0 0% 100%;
+  --popover: 222 42% 15%;
+  --popover-foreground: 0 0% 100%;
+  --primary: 0 0% 100%;
+  --primary-foreground: 222 47% 11%;
+  --secondary: 217 33% 22%;
+  --secondary-foreground: 0 0% 100%;
+  --muted: 217 33% 22%;
+  --muted-foreground: 214 20% 74%;
+  --accent: 0 72% 52%;
+  --accent-foreground: 0 0% 100%;
+  --destructive: 0 72% 52%;
+  --destructive-foreground: 0 0% 100%;
+  --border: 217 27% 32%;
+  --input: 217 27% 32%;
+  --ring: 0 72% 52%;
+  --ink: 222 47% 11%;
+  --ink-foreground: 0 0% 100%;
+  --gold: 0 72% 52%;
+  --surface: 217 33% 22%;
+}
+
+@layer base {
+  * { border-color: hsl(var(--border)); }
+  html { background: hsl(var(--background)); }
+  body { @apply bg-background text-foreground; }
+  a, button { -webkit-tap-highlight-color: transparent; }
+}
+
+@layer utilities {
+  .bg-ink { background-color: hsl(var(--ink)); }
+  .text-ink-foreground { color: hsl(var(--ink-foreground)); }
+  .bg-gold { background-color: hsl(var(--gold)); }
+  .text-gold { color: hsl(var(--gold)); }
+  .bg-surface { background-color: hsl(var(--surface)); }
+  .bg-hero-scrim { background: linear-gradient(90deg, hsl(var(--ink) / .96) 0%, hsl(var(--ink) / .72) 48%, hsl(var(--ink) / .28) 100%); }
+  .eyebrow { @apply text-xs font-bold uppercase tracking-[0.18em] text-primary; }
+}
+
+@media (max-width: 640px) {
+  input, textarea, select { font-size: 16px !important; }
+}
