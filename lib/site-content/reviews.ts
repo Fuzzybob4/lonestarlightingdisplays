@@ -14,35 +14,8 @@ export type Review = {
   visible: boolean
 }
 
-export const DEFAULT_REVIEWS: Review[] = [
-  {
-    id: "seed-sarah",
-    name: "Sarah M.",
-    location: "",
-    quote:
-      "They transformed our home into a winter wonderland. Professional, on-time, and the takedown service in January was seamless. Highly recommend!",
-    rating: 5,
-    visible: true,
-  },
-  {
-    id: "seed-james",
-    name: "James T.",
-    location: "",
-    quote:
-      "Best decision we made for the holidays. The team designed a display that perfectly fit our home, and a bulb went out mid-season — they fixed it the next day, no charge.",
-    rating: 5,
-    visible: true,
-  },
-  {
-    id: "seed-rodriguez",
-    name: "The Rodriguez Family",
-    location: "",
-    quote:
-      "We get compliments from neighbors all season long. Worth every penny to skip the ladder and let the pros handle it. We'll be repeat customers for years.",
-    rating: 5,
-    visible: true,
-  },
-]
+// No reviews ship by default. Add real customer reviews from /admin → Reviews.
+export const DEFAULT_REVIEWS: Review[] = []
 
 export const MAX_REVIEWS = 60
 
