@@ -1,5 +1,5 @@
 import Link from "next/link"
-import Image from "next/image"
+import { SiteImage } from "@/components/site-image"
 import type { Metadata } from "next"
 import { ArrowRight, Phone } from "lucide-react"
 import { Button } from "@/components/ui/button"
@@ -123,9 +123,9 @@ export default function GalleryPage() {
       <section className="bg-background px-5 py-16 sm:px-8 lg:py-20">
         <div className="mx-auto max-w-7xl">
           <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            {PROJECTS.map((project) => (
+            {PROJECTS.map((project, index) => (
               <div key={project.image} className="group relative aspect-[4/3] overflow-hidden">
-                <Image
+                <SiteImage slot={`gallery-${index + 1}`}
                   src={project.image}
                   alt={project.alt}
                   fill

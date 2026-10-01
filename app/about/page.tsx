@@ -1,5 +1,5 @@
 import Link from "next/link"
-import Image from "next/image"
+import { SiteImage } from "@/components/site-image"
 import type { Metadata } from "next"
 import { ArrowRight, Award, Phone, ShieldCheck, Users } from "lucide-react"
 import { Button } from "@/components/ui/button"
@@ -52,7 +52,7 @@ export default function AboutPage() {
 
       <section className="relative">
         <div className="absolute inset-0">
-          <Image
+          <SiteImage slot="about-hero"
             src="/images/premium-roofline-closeup.png"
             alt="Close-up of professional warm white holiday roofline lighting"
             fill
@@ -111,7 +111,7 @@ export default function AboutPage() {
               </p>
             </div>
             <div className="relative aspect-[4/3] overflow-hidden">
-              <Image
+              <SiteImage slot="about-story"
                 src="/images/premium-hillcountry-estate.png"
                 alt="Luxury Texas hill country home lit for the holidays at dusk"
                 fill

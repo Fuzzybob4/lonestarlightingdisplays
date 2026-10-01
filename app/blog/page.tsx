@@ -3,74 +3,18 @@ import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { CalendarIcon, Clock, ArrowRight } from "lucide-react"
+import { formatPostDate, getBlogPosts, publishedPosts, readingTime } from "@/lib/site-content/blog"
 
 export const metadata = {
   title: "Blog | Lone Star Lighting Displays",
   description:
     "Tips, ideas, and inspiration for holiday lighting and decorations from the experts at Lone Star Lighting Displays.",
+  alternates: { canonical: "/blog" },
 }
 
-const blogPosts = [
-  {
-    id: 1,
-    title: "Best Time to Book Christmas Light Installation in Texas",
-    excerpt:
-      "Learn why early booking is crucial for securing the best installation dates and maximizing your holiday display time.",
-    date: "September 15, 2023",
-    readTime: "5 min read",
-    slug: "best-time-to-book",
-    image: "/images/holiday-lights.png",
-  },
-  {
-    id: 2,
-    title: "DIY vs. Professional Holiday Lighting – What's Best?",
-    excerpt:
-      "Compare the pros and cons of DIY holiday lighting versus hiring professionals for your Christmas display.",
-    date: "October 3, 2023",
-    readTime: "7 min read",
-    slug: "diy-vs-professional",
-    image: "/images/holiday-basic.png",
-  },
-  {
-    id: 3,
-    title: "Energy-Efficient Holiday Lighting: Save Money While Celebrating",
-    excerpt:
-      "Discover how modern LED technology can create stunning displays while keeping your electricity bills manageable.",
-    date: "October 18, 2023",
-    readTime: "6 min read",
-    slug: "energy-efficient-lighting",
-    image: "/images/holiday-advanced.png",
-  },
-  {
-    id: 4,
-    title: "Holiday Lighting Trends for 2023",
-    excerpt: "Stay ahead of the curve with this year's most popular holiday lighting styles, colors, and techniques.",
-    date: "November 1, 2023",
-    readTime: "8 min read",
-    slug: "holiday-lighting-trends",
-    image: "/images/holiday-premium.png",
-  },
-  {
-    id: 5,
-    title: "How to Prepare Your Home for Professional Light Installation",
-    excerpt: "Simple steps to take before your installation appointment to ensure a smooth and efficient process.",
-    date: "November 12, 2023",
-    readTime: "4 min read",
-    slug: "prepare-for-installation",
-    image: "/images/holiday-lights.png",
-  },
-  {
-    id: 6,
-    title: "Commercial Holiday Lighting: Boosting Business During the Season",
-    excerpt: "Learn how professional holiday lighting can attract customers and create a festive shopping experience.",
-    date: "November 25, 2023",
-    readTime: "9 min read",
-    slug: "commercial-holiday-lighting",
-    image: "/images/landscape-lighting.png",
-  },
-]
+export default async function BlogPage() {
+  const posts = publishedPosts(await getBlogPosts())
 
-export default function BlogPage() {
   return (
     <div className="container py-12 md:py-24">
       <div className="flex flex-col items-center text-center mb-12">
@@ -80,41 +24,39 @@ export default function BlogPage() {
         </p>
       </div>
 
-      <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
-        {blogPosts.map((post) => (
-          <Card key={post.id} className="overflow-hidden">
-            <div className="relative h-48">
-              <Image src={post.image || "/placeholder.svg"} alt={post.title} fill className="object-cover" />
-            </div>
-            <CardContent className="p-6">
-              <div className="flex items-center gap-4 text-sm text-muted-foreground mb-3">
-                <div className="flex items-center gap-1">
-                  <CalendarIcon className="h-4 w-4" />
-                  <span>{post.date}</span>
-                </div>
-                <div className="flex items-center gap-1">
-                  <Clock className="h-4 w-4" />
-                  <span>{post.readTime}</span>
-                </div>
+      {posts.length === 0 ? (
+        <p className="text-center text-muted-foreground">New articles are coming soon.</p>
+      ) : (
+        <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+          {posts.map((post) => (
+            <Card key={post.id} className="flex flex-col overflow-hidden">
+              <div className="relative h-48">
+                <Image src={post.image} alt={post.title} fill className="object-cover" />
               </div>
-              <h2 className="text-xl font-bold mb-2">{post.title}</h2>
-              <p className="text-muted-foreground mb-4">{post.excerpt}</p>
-              <Button variant="outline" className="w-full" asChild>
-                <Link href={`/blog/${post.slug}`}>
-                  Read More
-                  <ArrowRight className="ml-2 h-4 w-4" />
-                </Link>
-              </Button>
-            </CardContent>
-          </Card>
-        ))}
-      </div>
-
-      <div className="mt-12 text-center">
-        <Button variant="outline" size="lg">
-          Load More Articles
-        </Button>
-      </div>
+              <CardContent className="flex flex-1 flex-col p-6">
+                <div className="flex items-center gap-4 text-sm text-muted-foreground mb-3">
+                  <div className="flex items-center gap-1">
+                    <CalendarIcon className="h-4 w-4" aria-hidden="true" />
+                    <time dateTime={post.date}>{formatPostDate(post.date)}</time>
+                  </div>
+                  <div className="flex items-center gap-1">
+                    <Clock className="h-4 w-4" aria-hidden="true" />
+                    <span>{readingTime(post.body)}</span>
+                  </div>
+                </div>
+                <h2 className="text-xl font-bold mb-2 text-balance">{post.title}</h2>
+                <p className="text-muted-foreground mb-4 flex-1 leading-relaxed">{post.excerpt}</p>
+                <Button variant="outline" className="w-full" asChild>
+                  <Link href={`/blog/${post.slug}`}>
+                    Read More
+                    <ArrowRight className="ml-2 h-4 w-4" aria-hidden="true" />
+                  </Link>
+                </Button>
+              </CardContent>
+            </Card>
+          ))}
+        </div>
+      )}
     </div>
   )
 }
