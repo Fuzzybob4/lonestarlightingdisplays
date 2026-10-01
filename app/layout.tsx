@@ -5,7 +5,7 @@ import { ThemeProvider } from "@/components/theme-provider"
 import Header from "@/components/header"
 import Footer from "@/components/footer"
 import { ScrollToTop } from "@/components/scroll-to-top"
-import { MobileActionBar } from "@/components/mobile-action-bar"
+import { MobileActionBarGate } from "@/components/mobile-action-bar-gate"
 import { HubSpotScript } from "@/components/hubspot-script"
 import { JsonLd } from "@/components/json-ld"
 import { localBusinessSchema, webSiteSchema } from "@/lib/structured-data"
@@ -65,7 +65,7 @@ export default async function RootLayout({
               <Footer />
             </div>
           </SiteImagesProvider>
-          <MobileActionBar />
+          <MobileActionBarGate />
         </ThemeProvider>
 
         {/* HubSpot tracking code loaded client-side to avoid SSR script tag warnings */}
