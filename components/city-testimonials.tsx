@@ -3,8 +3,12 @@ import { Star } from "lucide-react"
 import { getReviews } from "@/lib/site-content/reviews"
 
 // Reviews are managed from /admin → Reviews.
-export async function CityTestimonials({ city }: { city: string }) {
-  const reviews = (await getReviews()).filter((review) => review.visible)
+export async function CityTestimonials({ city, slug }: { city: string; slug?: string }) {
+  let reviews = (await getReviews()).filter((review) => review.visible)
+  // Filter to location-specific reviews, or reviews with no location restriction
+  if (slug) {
+    reviews = reviews.filter((review) => !review.citySlug || review.citySlug === slug)
+  }
   if (reviews.length === 0) return null
 
   return (

@@ -11,6 +11,8 @@ export type Review = {
   location: string
   quote: string
   rating: number
+  /** City slug for location-specific reviews (e.g., "buda", "austin", "kyle"). Empty = show on all cities. */
+  citySlug: string
   visible: boolean
 }
 
@@ -22,6 +24,7 @@ export const DEFAULT_REVIEWS: Review[] = [
     location: "Buda, TX",
     quote: "Christian did fantastic work with getting these lights setup, professional, quick and a very fair pricing. Highly recommend lone star lighting!",
     rating: 5,
+    citySlug: "buda",
     visible: true,
   },
 ]
@@ -45,6 +48,7 @@ export function sanitizeReviews(input: unknown): Review[] | string {
       location: String(item.location ?? "").trim().slice(0, 80),
       quote,
       rating: rating >= 1 && rating <= 5 ? rating : 5,
+      citySlug: String(item.citySlug ?? "").toLowerCase().trim().slice(0, 40),
       visible: item.visible !== false,
     })
   }

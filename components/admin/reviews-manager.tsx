@@ -10,6 +10,7 @@ import { Textarea } from "@/components/ui/textarea"
 import { SaveBar, type SaveStatus } from "@/components/admin/save-bar"
 import { saveReviews } from "@/app/admin/actions"
 import type { Review } from "@/lib/site-content/reviews"
+import { CITIES } from "@/lib/cities"
 
 export function ReviewsManager({ initialReviews }: { initialReviews: Review[] }) {
   const router = useRouter()
@@ -28,7 +29,7 @@ export function ReviewsManager({ initialReviews }: { initialReviews: Review[] })
   function addReview() {
     setStatus(null)
     setReviews((current) => [
-      { id: crypto.randomUUID(), name: "", location: "", quote: "", rating: 5, visible: true },
+      { id: crypto.randomUUID(), name: "", location: "", quote: "", rating: 5, citySlug: "", visible: true },
       ...current,
     ])
   }
@@ -105,11 +106,27 @@ export function ReviewsManager({ initialReviews }: { initialReviews: Review[] })
                     />
                   </div>
                   <div className="flex flex-col gap-2">
-                    <Label htmlFor={`location-${review.id}`}>Location (optional)</Label>
+                    <Label htmlFor={`citySlug-${review.id}`}>Show on city (optional)</Label>
+                    <select
+                      id={`citySlug-${review.id}`}
+                      value={review.citySlug}
+                      onChange={(event) => update(review.id, { citySlug: event.target.value })}
+                      className="flex h-10 rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
+                    >
+                      <option value="">All cities (homepage only)</option>
+                      {CITIES.map((city) => (
+                        <option key={city.slug} value={city.slug}>
+                          {city.city}, TX
+                        </option>
+                      ))}
+                    </select>
+                  </div>
+                  <div className="flex flex-col gap-2">
+                    <Label htmlFor={`location-${review.id}`}>Display name (optional)</Label>
                     <Input
                       id={`location-${review.id}`}
                       value={review.location}
-                      placeholder="Leave blank to show the page's city"
+                      placeholder="e.g. Buda, TX (shown under customer name)"
                       onChange={(event) => update(review.id, { location: event.target.value })}
                     />
                   </div>

@@ -242,7 +242,7 @@ export function CityPageTemplate({ data }: { data: CityData }) {
       </section>
 
       {/* Testimonials / Proof */}
-      <CityTestimonials city={city} />
+      <CityTestimonials city={city} slug={slug} />
 
       {/* FAQ */}
       <section className="bg-muted py-12 md:py-24">
