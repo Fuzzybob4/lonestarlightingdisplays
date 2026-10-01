@@ -14,8 +14,17 @@ export type Review = {
   visible: boolean
 }
 
-// No reviews ship by default. Add real customer reviews from /admin → Reviews.
-export const DEFAULT_REVIEWS: Review[] = []
+// Default reviews - add more from /admin → Reviews.
+export const DEFAULT_REVIEWS: Review[] = [
+  {
+    id: "pinballz-buda-1",
+    name: "Pinballz Buda",
+    location: "Buda, TX",
+    quote: "Christian did fantastic work with getting these lights setup, professional, quick and a very fair pricing. Highly recommend lone star lighting!",
+    rating: 5,
+    visible: true,
+  },
+]
 
 export const MAX_REVIEWS = 60
 
