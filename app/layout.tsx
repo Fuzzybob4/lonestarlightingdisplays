@@ -1,6 +1,7 @@
 import type React from "react"
 import type { Metadata } from "next"
 import { Inter, DM_Sans } from "next/font/google"
+import Script from "next/script"
 import { ThemeProvider } from "@/components/theme-provider"
 import Header from "@/components/header"
 import Footer from "@/components/footer"
@@ -13,6 +14,8 @@ import { BUSINESS_INFO } from "@/lib/business-info"
 import { SiteImagesProvider } from "@/components/site-image"
 import { getImageOverrides } from "@/lib/site-images/store"
 import "./globals.css"
+
+const GOOGLE_TAG_ID = "AW-18494205178"
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-body" })
 const dmSans = DM_Sans({ subsets: ["latin"], variable: "--font-heading" })
@@ -67,6 +70,14 @@ export default async function RootLayout({
           </SiteImagesProvider>
           <MobileActionBarGate />
         </ThemeProvider>
+
+        <Script src={`https://www.googletagmanager.com/gtag/js?id=${GOOGLE_TAG_ID}`} strategy="afterInteractive" />
+        <Script id="google-tag" strategy="afterInteractive">
+          {`window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', '${GOOGLE_TAG_ID}');`}
+        </Script>
 
         {/* HubSpot tracking code loaded client-side to avoid SSR script tag warnings */}
         <HubSpotScript />
