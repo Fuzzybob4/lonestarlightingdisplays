@@ -1,5 +1,5 @@
 import Link from "next/link"
-import Image from "next/image"
+import { SiteImage } from "@/components/site-image"
 import { ArrowRight, Check, Phone } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
@@ -50,9 +50,9 @@ export function ServiceDetailTemplate({
       {/* Hero */}
       <section className="relative">
         <div className="absolute inset-0">
-          <Image
+          <SiteImage slot={`${basePath === "/commercial" ? "commercial" : "service"}-${data.slug}-hero`}
             src={data.heroImage || "/placeholder.svg"}
-            alt={`${data.name} in ${BUSINESS_INFO.address.addressLocality}, Texas`}
+            alt={`${data.name} in Central Texas`}
             fill
             priority
             className="object-cover"
@@ -107,7 +107,7 @@ export function ServiceDetailTemplate({
               </ul>
             </div>
             <div className="relative aspect-[4/3] overflow-hidden rounded-lg">
-              <Image
+              <SiteImage slot={`${basePath === "/commercial" ? "commercial" : "service"}-${data.slug}-secondary`}
                 src={data.secondaryImage || "/placeholder.svg"}
                 alt={`${data.name} example`}
                 fill
@@ -162,7 +162,7 @@ export function ServiceDetailTemplate({
       </section>
 
       {/* Proof */}
-      <CityTestimonials city={BUSINESS_INFO.address.addressLocality} />
+      <CityTestimonials city="Central Texas" />
 
       {/* FAQs */}
       <section className="py-12 md:py-20">

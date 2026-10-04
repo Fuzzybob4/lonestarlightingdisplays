@@ -92,8 +92,8 @@ export default function ContactPage() {
                 <div>
                   <p className="font-medium">What areas do you serve?</p>
                   <p className="text-sm text-muted-foreground mt-1">
-                    We currently serve the greater Austin, San Antonio, and Houston areas. Contact us to confirm service
-                    in your specific location.
+                    We serve Austin and Central Texas, including Buda, Kyle, San Marcos, Dripping Springs and
+                    surrounding communities. Contact us to confirm service at your property.
                   </p>
                 </div>
                 <div>
