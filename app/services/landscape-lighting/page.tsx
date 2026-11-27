@@ -1,5 +1,5 @@
 import Link from "next/link"
-import Image from "next/image"
+import { SiteImage } from "@/components/site-image"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { CheckCircle, ArrowRight, Lightbulb, Clock, Shield, Sparkles } from "lucide-react"
@@ -37,7 +37,7 @@ export default function LandscapeLightingPage() {
       {/* Featured Image */}
       <section className="container py-12">
         <div className="relative h-[400px] md:h-[500px] rounded-2xl overflow-hidden">
-          <Image
+          <SiteImage slot="landscape-hero"
             src="/images/landscape-lighting.png"
             alt="Professional Landscape Lighting Installation"
             fill
@@ -170,13 +170,13 @@ export default function LandscapeLightingPage() {
 
             <div className="grid grid-cols-2 gap-4">
               <div className="relative h-64 rounded-lg overflow-hidden">
-                <Image src="/images/landscape-lighting.png" alt="Path lighting" fill className="object-cover" />
+                <SiteImage slot="landscape-path" src="/images/landscape-lighting.png" alt="Path lighting" fill className="object-cover" />
               </div>
               <div className="relative h-64 rounded-lg overflow-hidden">
-                <Image src="/images/outdoor-lighting.png" alt="Tree uplighting" fill className="object-cover" />
+                <SiteImage slot="landscape-tree" src="/images/outdoor-lighting.png" alt="Tree uplighting" fill className="object-cover" />
               </div>
               <div className="relative h-64 rounded-lg overflow-hidden col-span-2">
-                <Image src="/images/patio.png" alt="Garden accent lighting" fill className="object-cover" />
+                <SiteImage slot="landscape-garden" src="/images/patio.png" alt="Garden accent lighting" fill className="object-cover" />
               </div>
             </div>
           </div>

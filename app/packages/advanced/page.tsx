@@ -195,7 +195,7 @@ export default function AdvancedPackagePage() {
             Ready for the Full Experience?
           </h2>
           <p className="mt-4 text-primary-foreground/80 text-lg max-w-[700px] mx-auto">
-            Join thousands of satisfied customers who chose our Advanced Package for their holiday lighting.
+            Choose a custom lighting design built around your home and the look you want.
           </p>
           <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
             <Button size="lg" variant="secondary" asChild>

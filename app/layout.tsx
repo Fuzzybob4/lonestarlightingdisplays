@@ -1,23 +1,32 @@
 import type React from "react"
 import type { Metadata } from "next"
-import { Inter } from "next/font/google"
+import { Inter, DM_Sans } from "next/font/google"
+import Script from "next/script"
 import { ThemeProvider } from "@/components/theme-provider"
 import Header from "@/components/header"
 import Footer from "@/components/footer"
 import { ScrollToTop } from "@/components/scroll-to-top"
+import { MobileActionBarGate } from "@/components/mobile-action-bar-gate"
 import { HubSpotScript } from "@/components/hubspot-script"
 import { JsonLd } from "@/components/json-ld"
 import { localBusinessSchema, webSiteSchema } from "@/lib/structured-data"
 import { BUSINESS_INFO } from "@/lib/business-info"
+import { SiteImagesProvider } from "@/components/site-image"
+import { getImageOverrides } from "@/lib/site-images/store"
 import "./globals.css"
 
-const inter = Inter({ subsets: ["latin"] })
+const GOOGLE_TAG_ID = "AW-18494205178"
+
+const inter = Inter({ subsets: ["latin"], variable: "--font-body" })
+const dmSans = DM_Sans({ subsets: ["latin"], variable: "--font-heading" })
+
+export const viewport = { width: "device-width", initialScale: 1, maximumScale: 1, themeColor: "#ffffff" }
 
 export const metadata: Metadata = {
   metadataBase: new URL(BUSINESS_INFO.url),
-  title: "Lone Star Lighting Displays | Holiday Lighting Austin TX | Christmas Lights Central Texas",
+  title: "Christmas Light Installation Kyle & Buda TX | Lone Star",
   description:
-    "Professional Christmas light installation in Austin, Buda, Kyle, San Marcos & Dripping Springs TX. Holiday lighting Austin TX experts. Book your free estimate today.",
+    "Professional Christmas light installation in Kyle, Buda, San Marcos and South Austin. Design, installation, maintenance, takedown and storage included.",
   keywords:
     "holiday lighting Austin TX, Christmas lights Austin Texas, Christmas light installation Austin, Buda Christmas lights, Buda holiday lighting, Kyle Christmas lights, San Marcos holiday lighting, Dripping Springs Christmas lights, Central Texas holiday lights, professional Christmas light installer near me",
   alternates: {
@@ -40,23 +49,35 @@ export const metadata: Metadata = {
     generator: 'v0.app'
 }
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: {
   children: React.ReactNode
 }) {
+  const imageOverrides = await getImageOverrides()
   return (
-    <html lang="en" suppressHydrationWarning>
-      <body className={inter.className}>
+    <html lang="en" className="bg-background" suppressHydrationWarning>
+      <body className={`${inter.variable} ${dmSans.variable} font-sans`}>
         <JsonLd id="json-ld-global" data={[localBusinessSchema(), webSiteSchema()]} />
-        <ThemeProvider attribute="class" defaultTheme="dark" enableSystem disableTransitionOnChange>
+        <ThemeProvider attribute="class" defaultTheme="light" enableSystem disableTransitionOnChange>
           <ScrollToTop />
-          <div className="flex min-h-screen flex-col">
-            <Header />
-            <main className="flex-1">{children}</main>
-            <Footer />
-          </div>
+          <SiteImagesProvider overrides={imageOverrides}>
+            <div className="flex min-h-screen flex-col">
+              <Header />
+              <main className="flex-1">{children}</main>
+              <Footer />
+            </div>
+          </SiteImagesProvider>
+          <MobileActionBarGate />
         </ThemeProvider>
+
+        <Script src={`https://www.googletagmanager.com/gtag/js?id=${GOOGLE_TAG_ID}`} strategy="afterInteractive" />
+        <Script id="google-tag" strategy="afterInteractive">
+          {`window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', '${GOOGLE_TAG_ID}');`}
+        </Script>
 
         {/* HubSpot tracking code loaded client-side to avoid SSR script tag warnings */}
         <HubSpotScript />

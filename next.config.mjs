@@ -3,6 +3,7 @@ const nextConfig = {
   reactStrictMode: true,
   images: {
     domains: ['v0.blob.com'], // Allow images from v0.blob.com domain
+    remotePatterns: [{ protocol: 'https', hostname: '*.public.blob.vercel-storage.com' }],
     unoptimized: true, // Skip optimization during development
   },
   eslint: {

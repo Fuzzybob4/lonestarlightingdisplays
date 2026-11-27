@@ -63,7 +63,7 @@ export const SERVICE_DETAILS: ServiceDetail[] = [
       { step: "1", title: "Consultation", description: "We assess your roofline and design a custom track layout for your home." },
       { step: "2", title: "Professional Install", description: "Our team mounts the channels and color-matched track in a single visit." },
       { step: "3", title: "App Setup", description: "We configure your app, presets, and schedules so you're ready to go." },
-      { step: "4", title: "Lifetime Support", description: "We back every install with warranty coverage and responsive local support." },
+      { step: "4", title: "Local Support", description: "We remain available for in-season service under the signed agreement." },
     ],
     features: [
       "Color-matched aluminum track",
@@ -72,7 +72,7 @@ export const SERVICE_DETAILS: ServiceDetail[] = [
       "Unlimited color presets",
       "Scheduling & automation",
       "Weatherproof for Texas climate",
-      "Warranty-backed installation",
+      "Professional installation",
       "Professional design consultation",
     ],
     faqs: [
@@ -152,7 +152,7 @@ export const SERVICE_DETAILS: ServiceDetail[] = [
       {
         question: "How much does roofline lighting cost in Austin?",
         answer:
-          "Roofline lighting is priced by linear footage. Most homes range from $600 to $1,500+ for the season, including installation, maintenance, and takedown. We provide a free, exact quote after measuring your rooflines.",
+          "Roofline lighting is priced by linear footage. Each roofline receives a custom estimate after we review the property, access, and design scope.",
       },
       {
         question: "Do you use my lights or provide them?",
@@ -167,7 +167,7 @@ export const SERVICE_DETAILS: ServiceDetail[] = [
       {
         question: "What if a section goes out during the season?",
         answer:
-          "Our maintenance guarantee covers it. Call us and we'll repair or replace any failed section at no additional cost.",
+          "Contact us about in-season maintenance available under the signed service agreement.",
       },
     ],
     ctaTitle: "Outline Your Home in Holiday Magic",
@@ -225,7 +225,7 @@ export const SERVICE_DETAILS: ServiceDetail[] = [
       {
         question: "How much does tree wrapping cost in Austin?",
         answer:
-          "Tree wrapping is priced per tree based on size and how much coverage you want. Smaller trees start around $150-$300, while large mature oaks with full canopy wrapping can run $500+ each. Estimates are always free.",
+          "Tree wrapping is priced per tree based on size and how much coverage you want. Tree wrapping is quoted by tree size, access, coverage, and the design detail requested.",
       },
       {
         question: "Will wrapping hurt my trees?",
@@ -259,7 +259,7 @@ export const SERVICE_DETAILS: ServiceDetail[] = [
     heroImage: "/images/christmas-lighting.jpeg",
     secondaryImage: "/images/basic-package.png",
     intro:
-      "The holidays are over — leave the ladder in the garage. Our removal and storage service is included with every installation package and available as a standalone service. We carefully take down every strand, wreath, and tree wrap, then label and store everything in our climate-controlled facility so it's organized and ready to reinstall next year.",
+      "The holidays are over — leave the ladder in the garage. Our removal and storage service can be included in the signed installation agreement. We carefully take down and organize each display for the next season.",
     benefits: [
       {
         title: "On-Schedule Takedown",
@@ -281,7 +281,7 @@ export const SERVICE_DETAILS: ServiceDetail[] = [
     process: [
       { step: "1", title: "Schedule", description: "We set your removal date in early January when you book." },
       { step: "2", title: "Careful Takedown", description: "Our team removes all lighting, clips, and decor safely." },
-      { step: "3", title: "Label & Store", description: "Everything is labeled and stored in our climate-controlled facility." },
+      { step: "3", title: "Organize & Store", description: "Your display is labeled and organized for the next season when storage is included in your agreement." },
       { step: "4", title: "Effortless Reinstall", description: "Next season, your tracked setup goes back up faster than ever." },
     ],
     features: [
@@ -321,18 +321,18 @@ export const SERVICE_DETAILS: ServiceDetail[] = [
   },
   {
     slug: "maintenance-guarantee",
-    name: "Maintenance Guarantee",
+    name: "In-Season Maintenance",
     metaTitle: "Christmas Light Maintenance Guarantee Austin TX | In-Season Service | Lone Star Lighting",
     metaDescription:
-      "Our Christmas light maintenance guarantee keeps your Austin display perfect all season. Free repairs on any failed bulb or strand. Fast local service across Central Texas.",
+      "In-season Christmas light maintenance for Austin and Central Texas displays. Service details are defined in the signed agreement.",
     keywords:
       "Christmas light maintenance Austin, holiday light repair, Christmas light service guarantee, light maintenance Austin TX, professional Christmas light repair Central Texas",
-    heroTitle: "Our Maintenance Guarantee",
-    heroSubtitle: "If any light fails during the season, we fix it fast — at no extra charge. Guaranteed.",
+    heroTitle: "In-Season Maintenance",
+    heroSubtitle: "Keep your display looking its best with service defined in your signed agreement.",
     heroImage: "/images/christmas-elegant.png",
     secondaryImage: "/images/christmas-colorful.jpeg",
     intro:
-      "A great display should stay great all season long. That's why every Lone Star Lighting installation is backed by our in-season maintenance guarantee. If a bulb burns out, a strand goes dark, or a timer acts up, just call us — we'll be out promptly to make it right at no additional cost. It's the peace of mind that comes with hiring a local, professional team instead of doing it yourself.",
+      "A great display should stay great all season long. Ask about the in-season maintenance options available for your signed service agreement, including support for common lighting and timer issues.",
     benefits: [
       {
         title: "Free In-Season Repairs",
@@ -369,7 +369,7 @@ export const SERVICE_DETAILS: ServiceDetail[] = [
     ],
     faqs: [
       {
-        question: "What does the maintenance guarantee cover?",
+        question: "What does in-season maintenance cover?",
         answer:
           "It covers any failure in the lighting we installed — burned-out bulbs, dark strands, loose connections, and timer or controller issues — repaired or replaced free during the season.",
       },

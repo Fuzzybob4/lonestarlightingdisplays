@@ -17,10 +17,10 @@ export interface SeasonalContentData {
 
 export function getCurrentSeason(): Season {
   // Force holiday season until January 15
+  const today = new Date()
   return "holiday"
 
   // Uncomment below and comment out the line above to use automatic date-based switching:
-  // const today = new Date()
   const month = today.getMonth() + 1 // JavaScript months are 0-indexed
   const day = today.getDate()
 

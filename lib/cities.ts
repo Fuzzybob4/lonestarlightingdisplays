@@ -73,7 +73,7 @@ export const CITIES: CityData[] = [
       {
         question: "How much does Christmas light installation cost in Austin?",
         answer:
-          "Most Austin homes range from $600 for basic roofline lighting to $2,500+ for full displays with tree wrapping and landscape lighting. Every estimate is free and based on your home's size and design goals.",
+          "Every Austin property receives a custom estimate based on roofline, trees, access, and design goals.",
       },
       {
         question: "When should I book holiday lighting in Austin?",
@@ -83,7 +83,7 @@ export const CITIES: CityData[] = [
       {
         question: "Do you remove and store the lights after the holidays?",
         answer:
-          "Yes. Every package includes takedown in January and optional climate-controlled storage so your lights stay organized and ready for next season.",
+          "Takedown and storage can be included when selected in the signed service agreement.",
       },
       {
         question: "Are your displays HOA-compliant?",
@@ -98,7 +98,7 @@ export const CITIES: CityData[] = [
     county: "Hays County",
     established: "2021",
     customers: "200+",
-    heroImage: "/images/christmas-elegant.png",
+    heroImage: "/images/buda-lighting-displays.png",
     secondaryImage: "/images/advanced-package.png",
     proximity: "Just 15 miles south of Austin along I-35",
     intro:
@@ -131,7 +131,7 @@ export const CITIES: CityData[] = [
       {
         question: "How much do Buda Christmas lights cost?",
         answer:
-          "Buda installations typically start at $600 for roofline lighting and reach $2,500+ for complete displays. We provide free, no-obligation estimates tailored to your home.",
+          "Buda properties receive custom estimates tailored to the home, access, and desired display.",
       },
       {
         question: "When should I book in Buda?",
@@ -157,7 +157,7 @@ export const CITIES: CityData[] = [
     established: "2021",
     customers: "300+",
     heroImage: "/images/advanced-package.png",
-    secondaryImage: "/images/christmas-colorful.jpeg",
+    secondaryImage: "/images/kyle-residential-lighting.png",
     proximity: "20 miles south of Austin on the I-35 corridor",
     intro:
       "Professional holiday lighting in Kyle, TX. From Plum Creek to Waterleaf, we handle the design, installation, and removal of stunning Christmas displays for homes and businesses.",
@@ -189,7 +189,7 @@ export const CITIES: CityData[] = [
       {
         question: "How much does Christmas light installation cost in Kyle?",
         answer:
-          "Kyle homes generally range from $600 to $2,500+ depending on roofline size, tree wrapping, and landscape lighting. Estimates are always free.",
+          "Kyle homes receive custom estimates based on roofline size, tree wrapping, landscape lighting, and design scope.",
       },
       {
         question: "When should I book holiday lighting in Kyle?",
@@ -214,8 +214,8 @@ export const CITIES: CityData[] = [
     county: "Hays County",
     established: "2022",
     customers: "150+",
-    heroImage: "/images/gingerbread-package.png",
-    secondaryImage: "/images/christmas-lighting.jpeg",
+    heroImage: "/images/san-marcos-holiday-lighting.png",
+    secondaryImage: "/images/gingerbread-package.png",
     proximity: "30 miles south of Austin, halfway to San Antonio",
     intro:
       "San Marcos holiday lighting from a team that knows the area. We bring professional Christmas light installation to historic downtown homes, river-area residences, and local businesses.",
@@ -247,7 +247,7 @@ export const CITIES: CityData[] = [
       {
         question: "How much do Christmas lights cost in San Marcos?",
         answer:
-          "Most San Marcos homes range from $600 to $2,500+. We provide free estimates based on your home's size and the look you want.",
+          "San Marcos homes receive custom estimates based on property size, access, and the look you want.",
       },
       {
         question: "Do you light historic downtown San Marcos homes?",
@@ -320,7 +320,7 @@ export const CITIES: CityData[] = [
       {
         question: "Do you offer maintenance during the season?",
         answer:
-          "Every display is backed by our in-season maintenance guarantee — if a bulb or strand fails, we fix it fast at no extra charge.",
+          "In-season maintenance details are defined in the signed service agreement.",
       },
     ],
   },
@@ -363,7 +363,7 @@ export const CITIES: CityData[] = [
       {
         question: "How much does Christmas light installation cost in Cedar Park?",
         answer:
-          "Cedar Park homes typically range from $600 to $2,500+ depending on size and design. All estimates are free.",
+          "Cedar Park properties require an approved service-area review before any estimate is provided.",
       },
       {
         question: "When should I book holiday lighting in Cedar Park?",
@@ -421,7 +421,7 @@ export const CITIES: CityData[] = [
       {
         question: "How much do Christmas lights cost in Round Rock?",
         answer:
-          "Round Rock installations range from $600 for basic roofline lighting to $2,500+ for complete displays. Free estimates are always provided.",
+          "Round Rock service availability and estimates are subject to operating-area confirmation.",
       },
       {
         question: "Do you serve Round Rock businesses?",
@@ -479,7 +479,7 @@ export const CITIES: CityData[] = [
       {
         question: "How much does holiday lighting cost in Georgetown?",
         answer:
-          "Georgetown homes range from $600 to $2,500+ depending on size and design goals. Estimates are free.",
+          "Georgetown service availability and estimates are subject to operating-area confirmation.",
       },
       {
         question: "Do you offer easy packages for Sun City residents?",
@@ -552,7 +552,7 @@ export const CITIES: CityData[] = [
       {
         question: "Is in-season maintenance included?",
         answer:
-          "Yes. Our maintenance guarantee covers any failed bulbs or strands throughout the season at no extra charge.",
+          "In-season maintenance is available according to the signed service agreement.",
       },
     ],
   },
