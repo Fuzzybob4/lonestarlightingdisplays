@@ -1,6 +1,6 @@
 "use client"
 
-import { createContext, useContext, type ReactNode } from "react"
+import { createContext, useContext, useState, type ReactNode } from "react"
 import Image, { type ImageProps } from "next/image"
 
 const SiteImagesContext = createContext<Record<string, string>>({})
@@ -15,7 +15,23 @@ export function SiteImagesProvider({
   return <SiteImagesContext.Provider value={overrides}>{children}</SiteImagesContext.Provider>
 }
 
-export function SiteImage({ slot, src, alt, ...props }: ImageProps & { slot: string }) {
+export function SiteImage({ slot, src, alt, onError, ...props }: ImageProps & { slot: string }) {
   const overrides = useContext(SiteImagesContext)
-  return <Image src={overrides[slot] ?? src} alt={alt} {...props} />
+  const override = overrides[slot]
+  const [failedOverride, setFailedOverride] = useState<string | null>(null)
+  const useOverride = Boolean(override) && failedOverride !== override
+
+  return (
+    <Image
+      key={useOverride ? override : String(src)}
+      src={useOverride ? override : src}
+      alt={alt}
+      onError={(event) => {
+        // Uploaded images live in Blob storage; if that store is unreachable, fall back to the built-in photo.
+        if (useOverride) setFailedOverride(override)
+        onError?.(event)
+      }}
+      {...props}
+    />
+  )
 }
